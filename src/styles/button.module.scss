@@ -1,0 +1,33 @@
+@use '../styles/globalStyle.scss' as *;
+
+.button {
+    @include main-text;
+    @include text-button;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.mainButton {
+    color: $text-light-color;
+    background-color: $primary-color;
+    border: 1px solid #255323;
+}
+
+.secondButton {
+    color: $primary-color;
+    background-color: none;
+    border: 1px solid $primary-color;
+}
+
+.headerSecondButton {
+    color: $primary-color;
+    border: none;
+    background-color: $second-color;
+}

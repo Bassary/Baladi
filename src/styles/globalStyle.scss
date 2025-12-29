@@ -1,0 +1,45 @@
+// VARIABLE **************
+
+// COLORS
+
+$primary-color: #153114;
+$second-color: #FFF2E6;
+$card-color: #FFF9F3;
+$macaron-color: #9AD398;
+$text-light-color: #ffffff;
+$text-drack-color: #000;
+
+
+// MIXIN ***********
+
+// TEXTS
+
+@mixin main-text {
+    font-family: "Habibi", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin text-h1 {
+    font-size: 40px;
+}
+
+@mixin text-h2 {
+    font-size: 40px;
+}
+
+@mixin text-h3 {
+    font-size: 32px;
+}
+
+@mixin text-h4 {
+    font-size: 20px;
+}
+
+@mixin text-p {
+    font-size: 16px;
+}
+
+@mixin text-button {
+    font-size: 20px;
+}
