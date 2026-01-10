@@ -1,0 +1,72 @@
+@use './globalStyle.scss' as *;
+
+.containerTitleIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px
+}
+
+.titleH2 {
+    @include text-h2;
+    color: $primary-color;
+}
+
+.braquettes {
+    height: 20px;
+}
+
+.braquetteRight {
+    text-align: end;
+}
+
+.titleCenter {
+    text-align: center;
+}
+
+.poemFont {
+    @include poem-text();
+    font-size: 40px;
+    color: $primary-color;
+}
+
+.containerPoem {
+    background: $card-color;
+    color: $primary-color;
+    border-radius: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 64px;
+    padding-top: 64px;
+    @include box-shadow;
+}
+
+.containerTradition {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 64px;
+
+    &Text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+.textQuartier {
+    width: 800px;
+}
+
+.containerContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    gap: 32px;
+}

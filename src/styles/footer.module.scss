@@ -1,0 +1,41 @@
+@use './globalStyle.scss' as *;
+
+.containerFooter {
+    background-color: $primary-color;
+    color: $text-light-color;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 34px;
+    padding-top: 18px;
+    margin-top: 64px;
+
+    &Link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &Contact {
+        border-left: 2px solid $text-light-color;
+        padding-left: 18px;
+    }
+}
+
+.baladiFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: $text-light-color;
+
+    &Text {
+        font-size: 14px;
+    }
+}
+
+
+
+li {
+    list-style-type: none;
+}

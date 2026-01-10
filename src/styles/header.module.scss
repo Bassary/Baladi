@@ -1,0 +1,49 @@
+@use './globalStyle.scss' as *;
+
+.backgroundImage {
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 118px;
+    padding-bottom: 18px;
+}
+
+.containerHeader {
+    background-color: $background-opacity-dark;
+    display: flex;
+    flex-direction: column;
+    color: $text-light-color;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 36px;
+    padding-right: 36px;
+    border-radius: 10px;
+    margin-bottom: 36px;
+    gap: 18px;
+
+    &Text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+}
+
+
+// CHILDREN
+
+.containerInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &Bottom {
+        display: flex;
+
+    }
+}

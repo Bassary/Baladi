@@ -1,0 +1,14 @@
+@use './globalStyle.scss' as *;
+
+.sectionContentPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    margin-top: 64px;
+}
+
+.paddingContact {
+    margin-top: 0;
+    padding-top: 132px;
+}

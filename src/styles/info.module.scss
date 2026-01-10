@@ -1,0 +1,61 @@
+@use './globalStyle.scss' as *;
+
+.infos {
+    display: flex;
+    gap: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    align-items: center;
+}
+
+// HOME
+
+.sectionHome {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.infoMenuHome {
+    background-color: $card-color;
+    border-radius: 50px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    @include box-shadow;
+    color: $primary-color;
+    width: fit-content;
+}
+
+// TRAITEUR 
+
+.sectionTraiteur {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 64px;
+    padding-top: 64px;
+}
+
+.containerInfoTraiteur {
+    display: flex;
+    gap: 18px;
+}
+
+.sectionContact {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+
+    &Info {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+        align-items: center;
+    }
+}

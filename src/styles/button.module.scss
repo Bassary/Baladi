@@ -1,33 +1,49 @@
-@use '../styles/globalStyle.scss' as *;
+@use './globalStyle.scss' as *;
 
 .button {
     @include main-text;
     @include text-button;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 18px;
-    padding-top: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    padding-top: 16px;
     cursor: pointer;
-
-    &:hover {
-        opacity: 0.8;
-    }
+    border-radius: 6px;
+    border: none;
 }
 
 .mainButton {
     color: $text-light-color;
     background-color: $primary-color;
     border: 1px solid #255323;
+
+    &:hover {
+        background-color: $primary-color-hover;
+        border: 1px solid #2d642b;
+    }
 }
 
 .secondButton {
     color: $primary-color;
-    background-color: none;
-    border: 1px solid $primary-color;
+    background: none;
+    border: 2px solid $primary-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .headerSecondButton {
     color: $primary-color;
-    border: none;
     background-color: $second-color;
+    border: none;
+
+    &:hover {
+        background-color: #ece0d3;
+    }
+}
+
+.flexButtonRow {
+    display: flex;
+    gap: 18px;
 }

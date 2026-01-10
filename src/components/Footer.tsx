@@ -1,64 +1,64 @@
 import { NavLink } from "react-router-dom"
 import Infos from "./Info";
 
+import styleFooter from "../styles/footer.module.scss";
+import classNames from "classnames";
+
 
 
 function Footer() {
     return (
-        <footer>
-            <div>
-                <h2>BALADI</h2>
-                <p>Restaurant Libanais</p>
+        <footer className={classNames(styleFooter.containerFooter)}>
+            <div className={classNames(styleFooter.baladiFlex)}>
+                <h1>BALADI</h1>
+                <p className={classNames(styleFooter.baladiFlexText)}>Restaurant Libanais</p>
             </div>
+            <ul className={classNames(styleFooter.containerFooterLink)}>
+                <li>
+                    <NavLink
+                        to={'/'}
+                    >MENU</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to={'/traiteur'}
+                    >TRAITEUR</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to={'/privatisation'}
+                    >PRIVATISATION</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to={'/notre-histoire'}
+                    >NOTRE HISTOIRE</NavLink>
+                </li>
+            </ul>
+            <ul className={classNames(styleFooter.containerFooterLink)}>
+                <li>
+                    <NavLink
+                        to={'/'}
+                    >NOTRE MENU MIDI</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to={'/'}
+                    >TÉLÉCHARGER LE MENU</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to={'/contact'}
+                    >RÉSERVER UNE TABLE</NavLink>
+                </li>
+            </ul>
             <div>
-                <ul>
-                    <li>
-                        <NavLink
-                            to={'/'}
-                        >MENU</NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={'/'}
-                        >TRAITEUR</NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={'/'}
-                        >PRIVATISATION</NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={'/'}
-                        >NOTRE HISTOIRE</NavLink>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <NavLink
-                            to={'/'}
-                        >NOTRE MENU MIDI</NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={'/'}
-                        >TÉLÉCHARGER LE MENU</NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={'/'}
-                        >RÉSERVER UNE TABLE</NavLink>
-                    </li>
-                </ul>
-                <div>
-                    <h2>CONTACT :</h2>
+                <h2>CONTACT :</h2>
                     <div>
                         <Infos
                             iconColor="#FFF"
                             iconName="line-md:phone"
-                            textInfo="01 42 42 84 32"
+                            textInfo="01 42 41 84 32"
                         />
                         <Infos
                             iconColor="#FFF"
@@ -82,10 +82,6 @@ function Footer() {
                         />
                     </div>
                 </div>
-            </div>
-            
-
-
         </footer>
     )
 }

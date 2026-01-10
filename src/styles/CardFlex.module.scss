@@ -1,0 +1,41 @@
+@use './globalStyle.scss' as*;
+
+.containerCardFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $card-color;
+    border-radius: 10px;
+    height: 100%;
+    @include box-shadow;
+    width: 800px;
+
+    &Title {
+        width: 100%;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        text-align: center;
+        background-color: $primary-color;
+        color: $text-light-color;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+
+    &Children {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 18px;
+        padding-top: 18px;
+        padding-left: 64px;
+        padding-right: 64px;
+        gap: 18px;
+        color: $primary-color;
+    }
+
+    li {
+        list-style-type: initial;
+        font-size: 20px;
+    }
+}

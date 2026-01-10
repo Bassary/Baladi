@@ -1,43 +1,69 @@
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Button from "./Button"
-import style from '../styles/button.module.scss'
+import buttonStyle from '../styles/button.module.scss'
+import navbarStyle from '../styles/navbar.module.scss'
+import classNames from "classnames"
 
 function Navbar() {
+    const navigate = useNavigate()
+
+    const handleChange=(destination : string) => {
+        navigate(destination)
+    }
+
+
     return (
-            <nav>
-                <Link to={'/'}>
-                <h1>BALADI</h1>
-                <p>Restaurant Libanais</p>
-            </Link>
-                <ul>
+            <nav className={classNames(navbarStyle.background, navbarStyle.navbarContainerFlex)}>
+                <div className={classNames(navbarStyle.baladiFlex)}>
+                    <h1>BALADI</h1>
+                    <p className={classNames(navbarStyle.baladiFlexText)}>Restaurant Libanais</p>
+                </div>
+                <ul className={classNames(navbarStyle.navbarLinkFlex)}>
                     <li>
                         <NavLink
-                            to={'/'}
-                            className={({isActive}) => isActive ? `` : ''}
+                            to={'.'}
+                            end
+                           className={({isActive}) => classNames({
+                                [navbarStyle.active] : isActive,
+                                [navbarStyle.a] : true,
+                            })}
                         >
                             MENU
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
-                            to={''}
-                            className={({isActive}) => isActive ? `` : ''}
+                            to={'/traiteur'}
+                            end
+                            className={({isActive}) => classNames({
+                                [navbarStyle.active] : isActive,
+                                [navbarStyle.a] : true,
+                            })}
                         >
                             TRAITEUR
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
-                            to={''}
-                            className={({isActive}) => isActive ? `` : ''}
+                            to={'/privatisation'}
+                            end
+                            className={({isActive}) => classNames({
+                                [navbarStyle.active] : isActive,
+                                [navbarStyle.a] : true,
+                            })}
                         >
                             PRIVATISATION
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
-                            to={''}
-                            className={({isActive}) => isActive ? `` : ''}
+                            to={'/notre-histoire'}
+                            end
+                            className={({isActive}) => classNames({
+                                [navbarStyle.active] : isActive,
+                                [navbarStyle.a] : true,
+                            })}
                         >
                             NOTRE HISTOIRE
                         </NavLink>
@@ -45,7 +71,8 @@ function Navbar() {
                 </ul>
                 <Button
                     title="CONTACT"
-                    className={style.mainButton}
+                    className={buttonStyle.mainButton}
+                    onClick={() => handleChange('/contact')}
                 />
             </nav>
     )

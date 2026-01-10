@@ -1,7 +1,11 @@
-import Infos from "./Info";
+import { Icon } from "@iconify/react";
 import { useState } from "react";
 import MenuItem from "./MenuItem";
 import Button from "./Button";
+import styleMenu from "../styles/menu.module.scss";
+import styleMenuItem from '../styles/menuItem.module.scss'
+import classNames from "classnames";
+import styleButton from '../styles/button.module.scss';
 
 interface MenuItem {
     id: number;
@@ -16,32 +20,39 @@ interface MenuItem {
 interface MenuProps {
     title: string;
     items: MenuItem[];
-    className?: string;
+    classNameItems?: string;
+    ancreId?: string;
 }
 
 
-function Menu({title, items, className} : MenuProps) {
+function Menu({title, items, classNameItems, ancreId} : MenuProps) {
     const [showAll, setShowAll] = useState(false);
     const displayedItems = showAll ? items : items.slice(0, 3);
 
     return (
-        <div>
-            <div>
+        <div id={ancreId} className={classNames(styleMenu.containerMenu)}>
+            <div className={classNames(styleMenu.containerMenuTitle)}>
                 <h3>{title}</h3>
-                <div className={className}>
-                    <Infos
-                    iconName="iconoir:vegan"
-                    iconColor="#000"
-                    textInfo="Végan"
-                    />
-                    <Infos
-                    iconName="mingcute:leaf-line"
-                    iconColor="#000"
-                    textInfo="Végétarine"
-                    />
+                <div className={classNameItems}>
+                    <div className={classNames(styleMenu.containerMenuTitleInfoFlex)}>
+                        <Icon
+                            icon="iconoir:vegan"
+                            color="#000"
+                            className={classNames(styleMenuItem.iconMenuInfo)}
+                        />
+                        <span>Végan</span>
+                    </div>
+                    <div className={classNames(styleMenu.containerMenuTitleInfoFlex)}>
+                        <Icon
+                            icon="mingcute:leaf-line"
+                            color="#000"
+                            className={classNames(styleMenuItem.iconMenuInfo)}
+                        />
+                        <span>Végétarien</span>
+                    </div>
                 </div>
             </div>
-            <div>
+            <div className={classNames(styleMenu.containerMenuItems)}>
                 {displayedItems.map((item) => (
                     <MenuItem key={item.id} {...item}/>
                 ))}
@@ -49,6 +60,7 @@ function Menu({title, items, className} : MenuProps) {
             {items.length > 3 && (
                 <Button
                     title={showAll ? 'VOIR MOINS' : 'VOIR PLUS'}
+                    className={classNames(styleButton.secondButton)}
                     onClick={() => setShowAll(!showAll)}
                 ></Button>
             )}

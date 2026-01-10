@@ -1,0 +1,42 @@
+@use './globalStyle.scss' as *;
+
+
+.containerMenuItem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 180px;
+    position: relative;
+    gap: 4px;
+}
+
+
+.menuImage {
+    width: 100px;
+    height: 100px;
+}
+
+.iconMenu {
+    height: 20px;
+    width: 20px;
+    background-color: $macaron-color;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 80px;
+    right: 57px;
+}
+
+.iconMenuInfo {
+    height: 20px;
+    width: 20px;
+    background-color: $macaron-color;
+    border-radius: 50px;
+}
+
+.itemText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

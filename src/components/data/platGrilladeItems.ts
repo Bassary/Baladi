@@ -1,6 +1,7 @@
 export interface MenuItem {
     id: number;
     name: string;
+    subtitle?: string;
     price: string;
     imageSource: string;
     imageAlt: string;
@@ -29,7 +30,8 @@ export const platGrilladeItems: MenuItem[] = [
     },
     {
         id: 3,
-        name: 'Brochette de Boeuf ou Agneau',
+        name: 'Brochette de Boeuf',
+        subtitle: 'ou Agneau',
         price: '17,90€',
         imageSource: '/dishes/brochette.png',
         imageAlt: `photo d'une brochette de viande d'agneaude ou de boeuf`,
@@ -39,6 +41,7 @@ export const platGrilladeItems: MenuItem[] = [
     {
         id: 4,
         name: 'Griallade Royale Mixte',
+        subtitle: '',
         price: '19,90€',
         imageSource: '/dishes/grillade-royale-mixte.png',
         imageAlt: `photo d'une brochette de viande d'agneau, de boeuf et de poulet`,
@@ -47,7 +50,8 @@ export const platGrilladeItems: MenuItem[] = [
     },
     {
         id: 5,
-        name: 'Tartare de Boeuf (avec Fattouche)',
+        name: `Tartare de Boeuf`,
+        subtitle: '(avec Fattouche)',
         price: '18,90€',
         imageSource: '/dishes/tartar-de-boeuf.png',
         imageAlt: `photo d'un tartar de boeuf`,
