@@ -49,7 +49,7 @@ function Traiteur() {
                         <Button
                             title="DEMENDER UN DEVIS"
                             className={styleButton.mainButton}
-                            onClick={()=>handleChange('/contact')}
+                            onClick={()=>handleChange('/contact/#devis')}
                          />
                         <Button
                             title="PRIVATISEZ LE RESTAURANT"
@@ -168,6 +168,11 @@ function Traiteur() {
                 <h3>Pour toutes inforamtion ou question n’hésitez pas à nous contacter,<br></br>
                     nous nous ferons un plaisir de vous répondre
                 </h3>
+                <Button
+                    title="CONTACTEZ-NOUS"
+                    className={classNames(styleButton.mainButton)}
+                    onClick={()=> handleChange('/contact')}
+                />
                 
             </section>
         </section>

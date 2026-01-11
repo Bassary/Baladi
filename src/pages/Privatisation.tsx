@@ -55,7 +55,7 @@ function Privatisation() {
                         <Button
                             title="DEMENDER UN DEVIS"
                             className={styleButton.mainButton}
-                            onClick={()=>handleChange('/contact')}
+                            onClick={()=>handleChange('/contact/#devis')}
                         />
                         <Button
                             title="NOTRE HISTOIRE"
@@ -83,12 +83,21 @@ function Privatisation() {
                             <li>MEZZÉ FROIDS ET CHAUDS</li>
                             <li>GRILLADES</li>
                             <li>JUSQU'À 40 PERSONNES</li>
+                            <li>DEMANDE SUR DEVIS</li>
                          </ul>
-                         <Button
-                            title="VOIR LA CARTE"
-                            className={classNames(styleButton.mainButton)}
-                            onClick={()=>handleChange('/#mezze-froids')}
-                         />
+                         <div className={styleButton.flexButtonRow}>
+                            <Button
+                                title="VOIR LA CARTE"
+                                className={classNames(styleButton.mainButton)}
+                                onClick={()=>handleChange('/#mezze-froids')}
+                            />
+                            <Button
+                                title="DEMANDEZ UN DEVIS"
+                                className={classNames(styleButton.secondButton)}
+                                onClick={()=>handleChange('/contact/#devis')}
+                            />
+                         </div>
+                         
                         </>
                     }
                 />
