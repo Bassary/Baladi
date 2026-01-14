@@ -12,3 +12,20 @@
     margin-top: 0;
     padding-top: 132px;
 }
+
+.containerMotion {
+    width: 100%;
+}
+
+// MEDIA QUERIES
+
+@media (max-width : 800px) {
+
+    .sectionContentPage {
+        margin-top: 34px;
+    }
+
+    .sectionContentPageContact {
+        margin-top: 0px;
+    }
+}

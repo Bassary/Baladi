@@ -62,3 +62,17 @@
 .marginTopContainerWine {
     margin-top: 64px;
 }
+
+
+
+// MEDIA QUERIES
+
+@media (max-width : 800px) {
+
+    .marginTopContainerWine {
+
+        h2 {
+            text-align: center;
+        }
+    }
+}

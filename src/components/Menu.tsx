@@ -21,11 +21,12 @@ interface MenuProps {
     title: string;
     items: MenuItem[];
     classNameItems?: string;
+    classNameSubtitle?: string;
     ancreId?: string;
 }
 
 
-function Menu({title, items, classNameItems, ancreId} : MenuProps) {
+function Menu({title, items, classNameItems, ancreId, classNameSubtitle} : MenuProps) {
     const [showAll, setShowAll] = useState(false);
     const displayedItems = showAll ? items : items.slice(0, 3);
 
@@ -33,7 +34,8 @@ function Menu({title, items, classNameItems, ancreId} : MenuProps) {
         <div id={ancreId} className={classNames(styleMenu.containerMenu)}>
             <div className={classNames(styleMenu.containerMenuTitle)}>
                 <h3>{title}</h3>
-                <div className={classNameItems}>
+                <p className={`${styleMenu.hiddenSubtitle} ${classNameSubtitle}`}>Servie avec riz et salade sauce citron et huile d'olive</p>
+                <div className={`${styleMenu.containerMenuTitleInfo} ${classNameItems}`}>
                     <div className={classNames(styleMenu.containerMenuTitleInfoFlex)}>
                         <Icon
                             icon="iconoir:vegan"

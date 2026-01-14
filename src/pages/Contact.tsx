@@ -1,6 +1,7 @@
 import Button from '../components/Button';
 import Info from '../components/Info';
 import { useNavigate } from 'react-router-dom';
+import Animations from '../components/animation/Animations';
 
 // STYLE
 import classNames from 'classnames';
@@ -11,6 +12,7 @@ import styleInfo from '../styles/info.module.scss';
 
 
 function Contact() {
+    const {FadeInScroll} = Animations;
     const navigate = useNavigate()
 
     const handleChange = (destination : string) => {
@@ -20,48 +22,58 @@ function Contact() {
 
     return (
         <>
-        <section className={classNames(stylePage.sectionContentPage, stylePage.paddingContact)}>
-            <div className={classNames(styleTitle.containerTitleIcon)}>
-                <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
-                <h2 className={classNames(styleTitle.titleH2)}>Nous Contacter</h2>
-            </div>
-            <div className={classNames(styleTitle.containerContact)}>
-                <h3>Pour toute demande de <strong>reservation</strong>,
-                    <strong> service traiteur</strong> ou <strong>privatisation </strong>
-                    contacter nous par email ou par téléphone
-                </h3>
-                <div id='devis' className={classNames(styleButton.flexButtonRow)}>
+        <section className={classNames(stylePage.sectionContentPage, stylePage.paddingContact, stylePage.sectionContentPageContact)}>
+            <FadeInScroll>
+                <div className={classNames(styleTitle.containerTitleIcon)}>
+                    <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
+                    <h2 className={classNames(styleTitle.titleH2)}>Nous Contacter</h2>
+                </div>
+            </FadeInScroll>
+
+            <FadeInScroll delay={0.2}>
+                <div className={classNames(styleTitle.containerContact)}>
+                    <p>Pour toute demande de <strong>reservation</strong>,
+                        <strong> service traiteur</strong> ou <strong>privatisation </strong>
+                        contacter nous par email ou par téléphone
+                    </p>
+                    <div id='devis' className={classNames(styleButton.flexButtonRow)}>
+                        <Button
+                            title='baladi.rim@gmail.com'
+                            className={classNames(styleButton.mainButton)}
+                            mailto='baladi.rim@gmail.com'
+                        />
+                        <Button
+                            title='01 42 41 84 32 '
+                            className={classNames(styleButton.secondButton)}
+                            tel='01 42 42 84 32'
+                        />
+                    </div>
+                </div>
+            </FadeInScroll>
+        </section>
+
+        <FadeInScroll delay={0.3}>
+            <section className={classNames(styleInfo.sectionTraiteur)}>
+                <h2 className={classNames(styleTitle.titleH2)}>DEVIS</h2>
+                <p>Pour une demande de <strong>devis</strong> ou toutes <strong>inforamtions supplémentaire</strong>, contactez-nous au :
+                </p>
+                <div className={classNames(styleButton.flexButtonRow)}>
                     <Button
-                        title='email@email.com'
+                        title='baladi.rim@gmail.com'
                         className={classNames(styleButton.mainButton)}
-                        mailto='email@email.com'
+                        mailto='baladi.rim@gmail.com'
                     />
                     <Button
-                        title='01 42 41 84 32 '
+                        title='06 13 54 33 57'
                         className={classNames(styleButton.secondButton)}
-                        tel='01 42 42 84 32'
+                        tel='06 13 54 33 57'
                     />
                 </div>
-            </div>
-        </section>
-        <section className={classNames(styleInfo.sectionTraiteur)}>
-            <h2 className={classNames(styleTitle.titleH2)}>DEVIS</h2>
-            <p>Pour une demande de devis ou toutes inforamtions supplémentaire, contactez-nous au :
-            </p>
-            <div className={classNames(styleButton.flexButtonRow)}>
-                <Button
-                    title='email@mail.com'
-                    className={classNames(styleButton.mainButton)}
-                    mailto='email@mail.com'
-                />
-                <Button
-                    title='06 13 54 33 57'
-                    className={classNames(styleButton.secondButton)}
-                    tel='06 13 54 33 57'
-                />
-            </div>
-        </section>
-          <section className={classNames(styleInfo.sectionTraiteur)}>
+            </section>
+        </FadeInScroll>
+
+        <FadeInScroll delay={0.4}>
+            <section className={classNames(styleInfo.sectionTraiteur)}>
                     <h2 className={classNames(styleTitle.titleH2)}>INFORMATIONS</h2>
 
                     <div className={classNames(styleInfo.sectionContact)}>
@@ -129,6 +141,8 @@ function Contact() {
 
                     </div>
             </section>
+        </FadeInScroll>
+        
         </>
     )
 }

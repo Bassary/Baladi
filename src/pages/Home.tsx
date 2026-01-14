@@ -9,6 +9,7 @@ import { mezzeChaudItems } from "../components/data/mezzeChaudItems";
 import { mezzeFroidItems } from "../components/data/mezzeFroidItems";
 import { platGrilladeItems } from "../components/data/platGrilladeItems";
 import { useNavigate } from "react-router-dom";
+import Animations from "../components/animation/Animations";
 
 // STYLE
 import style from "../styles/menu.module.scss";
@@ -23,6 +24,7 @@ import styleCardLarge from '../styles/cardLarge.module.scss'
 
 
 function Home() {
+    const {FadeInScroll} = Animations
     const navigate = useNavigate();
 
     const handleChange = (destination : string) => {
@@ -42,7 +44,7 @@ function Home() {
                         <Info
                         iconColor="#FFF"
                         iconName="tabler:clock"
-                        textInfo="Ouvert 7/7 de 12h00-14h30 / 18h30-22h30"
+                        textInfo="Ouvert 7/7 de 12h00-14h30/18h30-22h30"
                         />
                         <div className={classNames(styleHeader.containerInfoBottom)}>
                             <Info
@@ -53,7 +55,7 @@ function Home() {
                             <Info
                             iconColor="#FFF"
                             iconName="simple-icons:metrodeparis"
-                            textInfo="Laumière / Jaurès"
+                            textInfo="Laumière/Jaurès"
                             />
                         </div>
                     </div>
@@ -76,32 +78,40 @@ function Home() {
             >
             </Header>
             <section className={stylePage.sectionContentPage}>
+                <FadeInScroll delay={0.1}>
                 <div className={classNames(styleTitle.containerTitleIcon)}>
                     <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
                     <h2 className={classNames(styleTitle.titleH2)}>Notre Carte</h2>
                 </div>
+                    <CardLarge
+                        ancreId="mezze-froids"
+                        title="PLATS DU JOUR"
+                        subTitle1="Du lundi midi au vendredi midi pour 14,90€"
+                        subTitle2="Appellez nous pour connaitre le plats du jour !"
+                        imageSource="/plat-du-jour.png"
+                        imageAlt="illustration du plat du jour"
+                        backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
+                        textColor={classNames(styleCardLarge.textColorLight)}
+                        children= {
+                            <Button
+                                title="01 42 41 84 32"
+                                className={classNames(styleButton.mainButton)}
+                                tel="01 42 41 84 32"
+                            />
+                        }
+                    />
+                </FadeInScroll>
                 
-                <CardLarge
-                    ancreId="mezze-froids"
-                    title="PLATS DU JOUR"
-                    subTitle1="Du lundi midi au vendredi midi pour 14,90€"
-                    subTitle2="Appellez nous pour connaitre le plats du jour : 01 42 41 84 32"
-                    imageSource="/plat-du-jour.png"
-                    imageAlt="illustration du plat du jour"
-                    backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
-                    textColor={classNames(styleCardLarge.textColorLight)}
-                    children= {
-                        <Button
-                            title="EN SAVOIR PLUS"
-                            className={classNames(styleButton.mainButton)}
-                            onClick={()=>''}
-                        />
-                    }
-                />
-                <Menu title="NOS MEZZÉS FROIDS" items={mezzeFroidItems} classNameItems={style.containerMenuTitleInfo}/>
-                <Menu title="NOS MEZZÉS CHAUD" items={mezzeChaudItems} classNameItems={style.containerMenuTitleInfo}/>
+                <FadeInScroll delay={0.2}>
+                    <Menu title="NOS MEZZÉS FROIDS" items={mezzeFroidItems} classNameItems={style.containerMenuTitleInfo}/>
+                </FadeInScroll>
 
-                <div className={classNames(styleCardSmall.flexHome)}>
+                <FadeInScroll delay={0.2}>
+                    <Menu title="NOS MEZZÉS CHAUD" items={mezzeChaudItems} classNameItems={style.containerMenuTitleInfo}/>
+                </FadeInScroll>
+                
+                <FadeInScroll delay={0.2}>
+                    <div className={classNames(styleCardSmall.flexHome)}>
                     <CardSmall
                         text="ASSIETTE BALADI"
                         price="14,90€"
@@ -124,33 +134,48 @@ function Home() {
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                 </div>
-                <CardLarge
-                    ancreId="grillades"
-                    title="NOS MEZZÉS"
-                    subTitle1="Assortiments d’entrées froides et chaudes sélectionnés par le Chef"
-                    imageSource="/background-header.png"
-                    imageAlt="assortiement de mézzes froid et chaud"
-                    backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
-                    textColor={classNames(styleCardLarge.textColorLight)}
-                    children= {
-                        <Button
-                            title="DÉCOUVRIR"
-                            className={classNames(styleButton.mainButton)}
-                            onClick={()=>''}
-                        />
-                    }
+                </FadeInScroll>
+
+                <FadeInScroll delay={0.2}>
+                    <CardLarge
+                        ancreId="grillades"
+                        title="MEZZÉS"
+                        subTitle1="Assortiments d’entrées froides et chaudes sélectionnés par le Chef"
+                        imageSource="/background-header.png"
+                        imageAlt="assortiement de mézzes froid et chaud"
+                        backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
+                        textColor={classNames(styleCardLarge.textColorLight)}
+                        // children= {
+                        //     <Button
+                        //         title="DÉCOUVRIR"
+                        //         className={classNames(styleButton.mainButton)}
+                        //         onClick={()=>''}
+                        //     />
+                        // }
                 />
-                <Menu title="NOS PLATS ET GRILLADES" items={platGrilladeItems} classNameItems={style.hiddenItems}/>
-                <CardLarge
-                    title="NOTRE MENU DÉCOUVERTE"
-                    subTitle1="Assortiments d’entrées chauds et froids ainsi qu’un deux de brochette sélectionnés par le Chef"
-                    imageSource="/background-header.png"
-                    imageAlt="assortiement de mézzes froid et chaud"
-                    backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
-                    textColor={classNames(styleCardLarge.textColorLight)}
-                />
-                <Menu title="NOS DESSERT" items={desertItems} classNameItems={style.hiddenItems}/>
-                <div className={classNames(styleCardSmall.flexTitleHome)}>
+                </FadeInScroll>
+
+                <FadeInScroll delay={0.2}>
+                    <Menu title="NOS PLATS ET GRILLADES" items={platGrilladeItems} classNameItems={style.hiddenItems} classNameSubtitle={style.visibleSubtitle}/>
+                </FadeInScroll>
+                
+                <FadeInScroll delay={0.2}>
+                    <CardLarge
+                        title="NOTRE MENU DÉCOUVERTE À 28€"
+                        subTitle1="Assortiments d’entrées chauds et froids ainsi qu’un deux de brochette sélectionnés par le Chef"
+                        imageSource="/background-header.png"
+                        imageAlt="assortiement de mézzes froid et chaud"
+                        backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
+                        textColor={classNames(styleCardLarge.textColorLight)}
+                    />
+                </FadeInScroll>
+                
+                <FadeInScroll delay={0.2}>
+                    <Menu title="NOS DESSERT" items={desertItems} classNameItems={style.hiddenItems}/>
+                </FadeInScroll>
+                
+                <FadeInScroll delay={0.2}>
+                    <div className={classNames(styleCardSmall.flexTitleHome)}>
                     <h2>NOS VINS LIBANAIS</h2>
                     <p>À savourer en verre ou en bouteille</p>
                     <div className={classNames(styleCardSmall.flexHome, styleCardSmall.marginTopWine)}>
@@ -186,54 +211,59 @@ function Home() {
                         />
                     </div>
                 </div>
-                <div className={classNames(styleTitle.containerTitleIcon)}>
-                    <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
-                    <h2 className={classNames(styleTitle.titleH2)}>BON APPÉTIT</h2>
-                </div>
-                <div className={classNames(styleButton.flexButtonRow)}>
-                    <Button
-                        title="RÉSERVER UNE TABLE"
-                        className={classNames(styleButton.mainButton)}
-                        onClick={()=>handleChange('/contact')}
+                </FadeInScroll>
+
+                <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotion)}>
+                    <div className={classNames(styleTitle.containerTitleIcon)}>
+                        <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
+                        <h2 className={classNames(styleTitle.titleH2)}>BON APPÉTIT</h2>
+                    </div>
+                    <div className={classNames(styleButton.flexButtonRow)}>
+                        <Button
+                            title="RÉSERVER UNE TABLE"
+                            className={classNames(styleButton.mainButton)}
+                            onClick={()=>handleChange('/contact')}
+                        />
+                        <Button
+                            title="TÉLÉCHARGER LE MENU"
+                            className={classNames(styleButton.secondButton)}
+                            onClick={()=>''}
+                        />
+                    </div>
+                    <div className={classNames(styleInfo.sectionHome)}>
+                    <Info
+                        iconColor="#153114"
+                        iconName="game-icons:france"
+                        textInfo="Produit locaux"
+                        classNameDiv={classNames(styleInfo.infoMenuHome)}
                     />
-                    <Button
-                        title="TÉLÉCHARGER LE MENU"
-                        className={classNames(styleButton.secondButton)}
-                        onClick={()=>''}
+                    <Info
+                        iconColor="#153114"
+                        iconName="temaki:meat"
+                        textInfo="Viande origine : France, Europe"
+                        classNameDiv={classNames(styleInfo.infoMenuHome)}
+                    />
+                    <Info
+                        iconColor="#153114"
+                        iconName="lineicons:leaf-1"
+                        textInfo="Produits Frais"
+                        classNameDiv={classNames(styleInfo.infoMenuHome)}
+                    />
+                    <Info
+                        iconColor="#153114"
+                        iconName="ph:cooking-pot-bold"
+                        textInfo="Cuisine fait maison"
+                        classNameDiv={classNames(styleInfo.infoMenuHome)}
+                    />
+                    <Info
+                        iconColor="#153114"
+                        iconName="hugeicons:halal"
+                        textInfo="Halal"
+                        classNameDiv={classNames(styleInfo.infoMenuHome)}
                     />
                 </div>
-                <div className={classNames(styleInfo.sectionHome)}>
-                <Info
-                    iconColor="#153114"
-                    iconName="game-icons:france"
-                    textInfo="Produit locaux"
-                    classNameDiv={classNames(styleInfo.infoMenuHome)}
-                />
-                <Info
-                    iconColor="#153114"
-                    iconName="temaki:meat"
-                    textInfo="Viande origine : France, Europe"
-                    classNameDiv={classNames(styleInfo.infoMenuHome)}
-                />
-                <Info
-                    iconColor="#153114"
-                    iconName="lineicons:leaf-1"
-                    textInfo="Produits Frais"
-                    classNameDiv={classNames(styleInfo.infoMenuHome)}
-                />
-                <Info
-                    iconColor="#153114"
-                    iconName="ph:cooking-pot-bold"
-                    textInfo="Cuisine fait maison"
-                    classNameDiv={classNames(styleInfo.infoMenuHome)}
-                />
-                <Info
-                    iconColor="#153114"
-                    iconName="hugeicons:halal"
-                    textInfo="Halal"
-                    classNameDiv={classNames(styleInfo.infoMenuHome)}
-                />
-            </div>
+            </FadeInScroll>
+               
             </section>
             
         </>

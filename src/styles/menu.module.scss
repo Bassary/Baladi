@@ -54,6 +54,25 @@
     }
 }
 
-.hiddenItems {
+.hiddenItems,
+.hiddenSubtitle {
     display: none;
+}
+
+.visibleSubtitle {
+    display: block;
+    padding-top: 4px;
+}
+
+@media (max-width : 800px) {
+
+    .containerMenu {
+        width: 100%;
+
+        p {
+            text-align: center;
+            font-size: 13px;
+        }
+
+    }
 }

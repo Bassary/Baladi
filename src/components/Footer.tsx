@@ -63,7 +63,7 @@ function Footer() {
                         <Infos
                             iconColor="#FFF"
                             iconName="meteor-icons:at"
-                            textInfo="email@mail.com"
+                            textInfo="baladi.rim@gmail.com"
                         />
                         <Infos
                             iconColor="#FFF"

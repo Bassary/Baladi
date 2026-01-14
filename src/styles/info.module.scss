@@ -16,6 +16,7 @@
     display: flex;
     gap: 18px;
     justify-content: center;
+    margin-top: 64px;
 }
 
 .infoMenuHome {
@@ -56,6 +57,18 @@
         display: flex;
         flex-direction: row;
         gap: 18px;
+        align-items: center;
+    }
+}
+
+// MEDIA QUERIES
+
+@media (max-width : 800px) {
+
+    .sectionHome,
+    .containerInfoTraiteur,
+    .sectionContactInfo {
+        flex-direction: column;
         align-items: center;
     }
 }

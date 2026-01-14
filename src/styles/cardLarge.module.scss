@@ -75,3 +75,26 @@
     align-items: center;
     gap: 18px;
 }
+
+// MEDIA QUERIES
+
+@media (max-width : 800px) {
+
+    .containerCard,
+    .containerBackground {
+        width: calc(100vw - 8px);
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .Image {
+        width: 100%;
+    }
+
+    .containerOptionTraiteur {
+        width: 100%;
+    }
+
+}

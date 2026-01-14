@@ -71,3 +71,76 @@ a::after {
 a:hover::after {
     width: 100%;
 }
+
+// MEDIA QUERIES
+
+@media (max-width: 800px) {
+
+    .navbarContainerFlex {
+        margin: 4px;
+        left: 0;
+        right: 0;
+    }
+
+    .navbarLinkFlex {
+        opacity: 0;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 1rem;
+        gap: 24px;
+        background-color: rgba(17, 3, 0, 0.89);
+        align-items: end;
+        border-radius: 10px;
+        padding-left: 62px;
+        margin-top: 4px;
+        transform: translateX(214px);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+
+
+        &.open {
+            opacity: 1;
+            display: flex;
+            transform: translateX(0);
+        }
+    }
+
+    .hamburgerButton {
+        display: block;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .baladiFlexText {
+        font-size: 11px;
+    }
+
+    .backgroundShadowNav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: white;
+        opacity: 0.7;
+        z-index: 99;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: all ease 0.2s;
+        backdrop-filter: blur(2px);
+    }
+
+    .backgroundNone {
+        opacity: 0;
+    }
+
+    .containerMotionNav {
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        width: 100%;
+    }
+}

@@ -39,3 +39,13 @@
         font-size: 20px;
     }
 }
+
+// MEDIA QUERIES
+
+@media (max-width : 800px) {
+
+    .containerCardFlex {
+        width: 100%;
+    }
+
+}

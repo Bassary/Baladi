@@ -46,4 +46,24 @@
 .flexButtonRow {
     display: flex;
     gap: 18px;
+    justify-content: center;
+}
+
+// MEDIA QUERIES 
+
+@media (max-width : 800px) {
+
+    .button {
+        font-size: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .flexButtonRow {
+        flex-direction: column;
+    }
+
+
 }

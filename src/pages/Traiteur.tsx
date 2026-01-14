@@ -3,6 +3,7 @@ import Info from "../components/Info";
 import Button from "../components/Button";
 import CardSmall from "../components/CardSmall";
 import { useNavigate } from "react-router-dom";
+import Animations from "../components/animation/Animations";
 
 // STYLE
 import classNames from "classnames";
@@ -18,6 +19,7 @@ import CardFlex from "../components/CardFlex";
 
 
 function Traiteur() {
+    const {FadeInScroll} = Animations;
     const navigate = useNavigate();
 
     const handleChange= (destination: string) => {
@@ -35,7 +37,7 @@ function Traiteur() {
                         <Info
                         iconColor="#FFF"
                         iconName="tabler:at"
-                        textInfo="email@email.com"
+                        textInfo="baladi.rim@gmail.com"
                         />
                         <Info
                         iconColor="#FFF"
@@ -62,31 +64,36 @@ function Traiteur() {
             >
         </Header>
         <section className={stylePage.sectionContentPage}>
-            <div className={classNames(styleTitle.containerTitleIcon)}>
+            <FadeInScroll>
+                <div className={classNames(styleTitle.containerTitleIcon)}>
                     <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
                     <h2 className={classNames(styleTitle.titleH2)}>Nos Offres</h2>
-            </div>
+                </div>  
+            </FadeInScroll>
             <div className={classNames(styleCardLarge.containerOptionTraiteur)}>
-                <CardFlex
-                    title="Option 1"
-                    children={
-                        <>
-                            <h2>MEZZÉ CHAUD ET FROID</h2>
-                            <p>Découvrez un assortiment de plats chauds et froids typique de la cuisine libanaise.
-                                <br></br>Savourez des mets variés qui feront l'unanimité, le choix idéal pour des moments conviviaux et de partage
-                            </p>
-                            <Button
-                                title="VOIR LA CARTE"
-                                className={classNames(styleButton.mainButton)}
-                                onClick={()=> handleChange('/#mezze-froids')}
-                            />
-                        </>
-                    }
-                />
+                <FadeInScroll delay={0.2}>
+                    <CardFlex
+                        title="Option 1"
+                        children={
+                            <>
+                                <h2>MEZZÉ CHAUD ET FROID</h2>
+                                <p>Découvrez un assortiment de plats chauds et froids typique de la cuisine libanaise.
+                                    <br></br>Savourez des mets variés qui feront l'unanimité, le choix idéal pour des moments conviviaux et de partage
+                                </p>
+                                <Button
+                                    title="VOIR LA CARTE"
+                                    className={classNames(styleButton.mainButton)}
+                                    onClick={()=> handleChange('/#mezze-froids')}
+                                />
+                            </>
+                            }
+                        />
+                </FadeInScroll>
                 <h2>OU</h2>
-                 <CardFlex
-                    title="Option 2"
-                    children={
+                <FadeInScroll delay={0.2}>
+                     <CardFlex
+                        title="Option 2"
+                        children={
                         <>
                             <h2>MEZZÉ GRILLADES</h2>
                             <p>Optez pour un assortiment gourmand de grillades, telles que les brochettes de poulet mariné ou de kefta.
@@ -98,45 +105,50 @@ function Traiteur() {
                                 onClick={()=> handleChange('/#grillades')}
                             />
                         </>
-                    }
-                />
+                        }
+                    />
+                </FadeInScroll>
             </div>
+            <FadeInScroll delay={0.2}>
             <section className={classNames(styleCardSmall.flexTitleHome, styleCardSmall.marginTopContainerWine)}>
                     <h2>ACCOMPAGNEZ VOS PLATS DE VINS LIBANAIS</h2>
-                    <p>À savourer en verre ou en bouteille</p>
-                    <div className={classNames(styleCardSmall.flexHome, styleCardSmall.marginTopWine)}>
-                        <CardSmall
-                            text="RÉSERVE DU COUVENT"
-                            imageSource="/wines/reserve-du-couvent.png"
-                            imageAlt="assiette baladi"
-                            classNameImage={classNames(styleCardSmall.Image)}
-                        />
-                        <CardSmall
-                            text="CHATEAU NAKAD"
-                            imageSource="/wines/chateau-nakad.png"
-                            imageAlt="assiette baladi"
-                            classNameImage={classNames(styleCardSmall.Image)}
-                        />
-                        <CardSmall
-                            text="KEFFRAYA ROUGE"
-                            imageSource="/wines/keffraya-rouge.png"
-                            imageAlt="assiette baladi"
-                            classNameImage={classNames(styleCardSmall.Image)}
-                        />
-                        <CardSmall
-                            text="KSARA SUNSET"
-                            imageSource="/wines/ksara-sunset.png"
-                            imageAlt="assiette baladi"
-                            classNameImage={classNames(styleCardSmall.Image)}
-                        />
-                        <CardSmall
-                            text="KSARA BLANC DE BLANCS"
-                            imageSource="/wines/ksara-blanc.png"
-                            imageAlt="assiette baladi"
-                            classNameImage={classNames(styleCardSmall.Image)}
-                        />
-                    </div>
-                </section>
+                <p>À savourer en verre ou en bouteille</p>
+                <div className={classNames(styleCardSmall.flexHome, styleCardSmall.marginTopWine)}>
+                    <CardSmall
+                        text="RÉSERVE DU COUVENT"
+                        imageSource="/wines/reserve-du-couvent.png"
+                        imageAlt="assiette baladi"
+                        classNameImage={classNames(styleCardSmall.Image)}
+                    />
+                    <CardSmall
+                        text="CHATEAU NAKAD"
+                        imageSource="/wines/chateau-nakad.png"
+                        imageAlt="assiette baladi"
+                        classNameImage={classNames(styleCardSmall.Image)}
+                    />
+                    <CardSmall
+                        text="KEFFRAYA ROUGE"
+                        imageSource="/wines/keffraya-rouge.png"
+                        imageAlt="assiette baladi"
+                        classNameImage={classNames(styleCardSmall.Image)}
+                    />
+                    <CardSmall
+                        text="KSARA SUNSET"
+                        imageSource="/wines/ksara-sunset.png"
+                        imageAlt="assiette baladi"
+                        classNameImage={classNames(styleCardSmall.Image)}
+                    />
+                    <CardSmall
+                        text="KSARA BLANC DE BLANCS"
+                        imageSource="/wines/ksara-blanc.png"
+                        imageAlt="assiette baladi"
+                        classNameImage={classNames(styleCardSmall.Image)}
+                    />
+                </div> 
+            </section>
+            </FadeInScroll>
+
+            <FadeInScroll delay={0.2}>
                 <section className={classNames(styleInfo.sectionTraiteur)}>
                     <h2 className={classNames(styleTitle.titleH2)}>INFORMATIONS</h2>
                     <div className={classNames(styleInfo.containerInfoTraiteur)}>
@@ -161,7 +173,7 @@ function Traiteur() {
                         <Info
                             iconColor="#153114"
                             iconName="tabler:at"
-                            textInfo="email@email.com"
+                            textInfo="baladi.rim@gmail.com"
                             classNameDiv={classNames(styleInfo.infoMenuHome)}
                         />
                 </div>
@@ -175,6 +187,7 @@ function Traiteur() {
                 />
                 
             </section>
+            </FadeInScroll>
         </section>
         </>
         

@@ -39,3 +39,18 @@
 li {
     list-style-type: none;
 }
+
+// MEDIA QUERIES
+
+@media (max-width : 800px) {
+
+    .containerFooter {
+        flex-direction: column;
+        gap: 18px;
+
+        &Link {
+            gap: 10px;
+        }
+
+    }
+}

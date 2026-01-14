@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import CardSmall from "../components/CardSmall";
 import CardFlex from "../components/CardFlex";
+import Animations from "../components/animation/Animations";
 
 // STYLE
 import classNames from "classnames";
@@ -16,6 +17,7 @@ import styleCardSmall from "../styles/cardSmall.module.scss";
 
 
 function Privatisation() {
+    const {FadeInScroll} = Animations;
     const navigate = useNavigate();
 
     const handleChange = (destination: string) => {
@@ -40,7 +42,7 @@ function Privatisation() {
                             <Info
                             iconColor="#FFF"
                             iconName="tabler:at"
-                            textInfo="email@email.com"
+                            textInfo="baladi.rim@gmail.com"
                             />
                             <Info
                             iconColor="#FFF"
@@ -67,12 +69,16 @@ function Privatisation() {
             >
         </Header>
         <section className={stylePage.sectionContentPage}>
-             <div className={classNames(styleTitle.containerTitleIcon)}>
+            <FadeInScroll delay={0.2}>
+                <div className={classNames(styleTitle.containerTitleIcon)}>
                     <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
                     <h2 className={classNames(styleTitle.titleH2, styleTitle.titleCenter)}>Privatisez le restaurant<br></br> pour un événement</h2>
                     <p>Réservez la salle pour vos événements privés ou professionnels</p>
-            </div>
-            <div className={classNames(styleCardLarge.containerOptionTraiteur)}>
+                </div>
+            </FadeInScroll>
+
+            <FadeInScroll delay={0.3}>
+                <div className={classNames(styleCardLarge.containerOptionTraiteur)}>
                 <CardFlex
                     title="Infos Pratique"
                     children={
@@ -102,8 +108,11 @@ function Privatisation() {
                     }
                 />
             </div>
+            </FadeInScroll> 
         </section>
-        <section className={classNames(styleCardSmall.flexTitleHome, styleCardSmall.marginTopContainerWine)}>
+
+        <FadeInScroll delay={0.2}>
+            <section className={classNames(styleCardSmall.flexTitleHome, styleCardSmall.marginTopContainerWine)}>
             <h2>ACCOMPAGNEZ VOS PLATS DE VINS LIBANAIS</h2>
             <p>À savourer en verre ou en bouteille</p>
             <div className={classNames(styleCardSmall.flexHome, styleCardSmall.marginTopWine)}>
@@ -139,8 +148,11 @@ function Privatisation() {
                 />
             </div>
         </section>
-        <section className={stylePage.sectionContentPage}>
-            <div className={classNames(styleTitle.containerTitleIcon)}>
+        </FadeInScroll>
+        
+        <FadeInScroll delay={0.2}>
+             <section className={stylePage.sectionContentPage}>
+                <div className={classNames(styleTitle.containerTitleIcon)}>
                     <img src="/jasmine.svg" alt="logo jasmin" height="80" width="80"/>
                     <h2 className={classNames(styleTitle.titleH2)}>BON APPÉTIT</h2>
                 </div>
@@ -156,7 +168,8 @@ function Privatisation() {
                         onClick={()=>''}
                     />
                 </div>
-        </section>
+            </section>
+        </FadeInScroll>
         </>
     )
 }
