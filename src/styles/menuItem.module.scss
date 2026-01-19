@@ -9,22 +9,23 @@
     height: 180px;
     position: relative;
     gap: 4px;
+    transition: all ease-in-out 0.5s;
 }
 
 
-.menuImage {
-    width: 100px;
-    height: 100px;
-}
+// .menuImage {
+//     width: 100px;
+//     height: 100px;
+// }
 
 .iconMenu {
     height: 20px;
     width: 20px;
     background-color: $macaron-color;
     border-radius: 50px;
-    position: absolute;
-    bottom: 80px;
-    right: 57px;
+    // position: absolute;
+    // bottom: 80px;
+    // right: 57px;
 }
 
 .iconMenuInfo {
@@ -36,7 +37,28 @@
 
 .itemText {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
+}
 
+.itemInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.itemInfoSubtile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.itemName,
+.itemPrice {
+    font-size: 18px !important;
+}
+
+.itemSubtitle {
+    font-size: 14px;
+    color: $subtitle-item-color;
 }

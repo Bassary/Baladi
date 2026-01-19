@@ -2,8 +2,9 @@ export interface MenuItem {
     id: number;
     name: string;
     price: string;
-    imageSource: string;
-    imageAlt: string;
+    // imageSource: string;
+    // imageAlt: string;
+    subtitle?: string;
     isVegan?: boolean;
     isVegetarien?: boolean;
 }
@@ -11,10 +12,11 @@ export interface MenuItem {
 export const mezzeChaudItems: MenuItem[] = [
     {
         id: 1,
-        name: 'Hommos bel Lahmé',
-        price: '10,90€',
-        imageSource: '/dishes/hommos-bel-lahme.png',
-        imageAlt: 'photo hommos bel lahmé',
+        name: 'Soupe « Baladi »',
+        subtitle: 'Faite selon la saison',
+        price: '6,90€',
+        // imageSource: '/dishes/hommos-bel-lahme.png',
+        // imageAlt: 'photo hommos bel lahmé',
         isVegan: false,
         isVegetarien: false, 
 
@@ -22,52 +24,129 @@ export const mezzeChaudItems: MenuItem[] = [
 
     {
         id: 2,
-        name: 'Balila (salade de pois chiche)',
+        name: 'Hommos bel lahmé',
+        subtitle: 'Purée de pois chiches garnie d’une poignée de viande d’agneau',
         price: '7,50€',
-        imageSource: '/dishes/balila.png',
-        imageAlt: 'photo balila, salde de pois chiche',
-        isVegan: true,
+        // imageSource: '/dishes/balila.png',
+        // imageAlt: 'photo balila, salde de pois chiche',
+        isVegan: false,
         isVegetarien: false, 
 
     },
     {
         id: 3,
-        name: 'Falafel',
-        price: '6,90€',
-        imageSource: '/dishes/falafel.png',
-        imageAlt: 'photo falafel, crocuqette de pois chiche frit',
+        name: 'Balila (salade de pois chiche)',
+        price: '7,50€',
+        subtitle: 'Pois chiches cuits, ail, citron, huile d’olive',
+        // imageSource: '/dishes/falafel.png',
+        // imageAlt: 'photo falafel, crocuqette de pois chiche frit',
         isVegan: true,
         isVegetarien: false, 
 
     },
     {
         id: 4,
-        name: 'Foul Moudamas (Salade de fèves)',
-        price: '7,50€',
-        imageSource: '/dishes/foul-moudamas.png',
-        imageAlt: 'photo foul moudamas, salade de fèves',
+        name: 'Falafel',
+        subtitle: 'Croquette de fèves et pois chiches, sauce Tarator',
+        price: '6,90€',
+        // imageSource: '/dishes/foul-moudamas.png',
+        // imageAlt: 'photo foul moudamas, salade de fèves',
         isVegan: true,
         isVegetarien: false, 
 
     },
     {
         id: 5,
-        name: 'Kebbé Boulettes',
-        price: '6,90€',
-        imageSource: '/dishes/kebbe-boulette.png',
-        imageAlt: 'photo kebbé, boullette de viande de boeuf et blé concassé',
-        isVegan: false,
+        name: 'Foul moudamas (salade de fèves)',
+        subtitle: 'Fèves cuites, ail, citron et huile d’olive',
+        price: '7,50€',
+        // imageSource: '/dishes/kebbe-boulette.png',
+        // imageAlt: 'photo kebbé, boullette de viande de boeuf et blé concassé',
+        isVegan: true,
         isVegetarien: false, 
 
     },
     {
         id: 6,
-        name: 'Samboussek viande',
+        name: 'Kébé Boulettes',
+        subtitle: 'Boulettes de blé concassé, farcies à la viande hachée et pignons de pin',
         price: '6,90€',
-        imageSource: '/dishes/samboussek.png',
-        imageAlt: 'photo samboussek à la viande de boeuf, chausson fouré à la viande',
+        // imageSource: '/dishes/samboussek.png',
+        // imageAlt: 'photo samboussek à la viande de boeuf, chausson fouré à la viande',
         isVegan: false,
         isVegetarien: false, 
+
+    },
+    {
+        id: 7,
+        name: 'Samboussek à la viande',
+        subtitle: 'Feuilletés à la viande et pignons de pin',
+        price: '6,90€',
+        isVegan: false,
+        isVegetarien: false, 
+
+    },
+    {
+        id: 8,
+        name: 'Samboussek au fromage salé',
+        subtitle: 'Feuilletés au fromage salé',
+        price: '6,90€',
+        isVegan: false,
+        isVegetarien: true, 
+
+    },
+    {
+        id: 9,
+        name: 'Fatayer aux épinards',
+        subtitle: 'Feuilletés aux épinards citronnés',
+        price: '6,90€',
+        isVegan: true,
+        isVegetarien: false, 
+
+    },
+    {
+        id: 10,
+        name: 'Rikakat',
+        subtitle: 'Feuilles de brick fourrées au fromage',
+        price: '7,90€',
+        isVegan: false,
+        isVegetarien: true, 
+
+    },
+    {
+        id: 11,
+        name: 'Foie de Volaille',
+        subtitle: 'Foie de volaille poêlé à la mélasse de grenade, tomates, menthe',
+        price: '6,90€',
+        isVegan: false,
+        isVegetarien: false, 
+
+    },
+    {
+        id: 12,
+        name: 'Jawaneh (ailerons de poulet grillés)',
+        subtitle: 'Ailerons de poulet grillés, marinés à l’ail, coriandre, citron',
+        price: '8,90€',
+        isVegan: false,
+        isVegetarien: false, 
+
+    },
+    {
+        id: 13,
+        name: 'Arayess',
+        subtitle: 'Galette de pain grillé garnie de viande hachée, persil, oignons',
+        price: '8,90€',
+        isVegan: false,
+        isVegetarien: false, 
+
+    },
+    {
+        id: 14,
+        name: 'Kalleje',
+        subtitle: 'Galette de pain grillé garnie de fromage, tomates, menthe',
+        price: '8,90€',
+        isVegan: false,
+        isVegetarien: true, 
 
     },
 ]

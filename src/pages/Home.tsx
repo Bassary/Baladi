@@ -4,12 +4,13 @@ import CardSmall from "../components/CardSmall";
 import Header from "../components/Header";
 import Info from "../components/Info";
 import Menu from "../components/Menu";
-import { desertItems } from "../components/data/dessertItems";
+import { dessertItems } from "../components/data/dessertItems";
 import { mezzeChaudItems } from "../components/data/mezzeChaudItems";
 import { mezzeFroidItems } from "../components/data/mezzeFroidItems";
 import { platGrilladeItems } from "../components/data/platGrilladeItems";
 import { useNavigate } from "react-router-dom";
 import Animations from "../components/animation/Animations";
+import MenuPDF from '../../public/Menu-Baladi.pdf'
 
 // STYLE
 import style from "../styles/menu.module.scss";
@@ -102,11 +103,16 @@ function Home() {
                     />
                 </FadeInScroll>
                 
-                <FadeInScroll delay={0.2}>
-                    <Menu title="NOS MEZZÉS FROIDS" items={mezzeFroidItems} classNameItems={style.containerMenuTitleInfo}/>
+                <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
+                    <Menu
+                        title="NOS MEZZÉS FROIDS"
+                        items={mezzeFroidItems}
+                        imageSource="/dishes/assiette-baladi.png"
+                        classNameItems={style.containerMenuTitleInfo}
+                    />
                 </FadeInScroll>
 
-                <FadeInScroll delay={0.2}>
+                <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
                     <Menu title="NOS MEZZÉS CHAUD" items={mezzeChaudItems} classNameItems={style.containerMenuTitleInfo}/>
                 </FadeInScroll>
                 
@@ -123,14 +129,14 @@ function Home() {
                         text="ASSIETTE VEGAN"
                         price="14,90€"
                         imageSource="/dishes/assiette-baladi.png"
-                        imageAlt="assiette baladi"
+                        imageAlt="assiette vegan"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="ASSIETTE VÉGÉTARIENNE"
                         price="14,90€"
                         imageSource="/dishes/assiette-baladi.png"
-                        imageAlt="assiette baladi"
+                        imageAlt="assiette végétarienne"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                 </div>
@@ -155,7 +161,7 @@ function Home() {
                 />
                 </FadeInScroll>
 
-                <FadeInScroll delay={0.2}>
+                <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
                     <Menu title="NOS PLATS ET GRILLADES" items={platGrilladeItems} classNameItems={style.hiddenItems} classNameSubtitle={style.visibleSubtitle}/>
                 </FadeInScroll>
                 
@@ -171,7 +177,7 @@ function Home() {
                 </FadeInScroll>
                 
                 <FadeInScroll delay={0.2}>
-                    <Menu title="NOS DESSERT" items={desertItems} classNameItems={style.hiddenItems}/>
+                    <Menu title="NOS DESSERT" items={dessertItems} classNameItems={style.hiddenItems}/>
                 </FadeInScroll>
                 
                 <FadeInScroll delay={0.2}>
@@ -182,31 +188,31 @@ function Home() {
                         <CardSmall
                             text="RÉSERVE DU COUVENT"
                             imageSource="/wines/reserve-du-couvent.png"
-                            imageAlt="assiette baladi"
+                            imageAlt="bouteille de vin Réserve du couvant"
                             classNameImage={classNames(styleCardSmall.Image)}
                         />
                         <CardSmall
                             text="CHATEAU NAKAD"
                             imageSource="/wines/chateau-nakad.png"
-                            imageAlt="assiette baladi"
+                            imageAlt="bouteille de vin Chateau Nakad"
                             classNameImage={classNames(styleCardSmall.Image)}
                         />
                         <CardSmall
                             text="KEFFRAYA ROUGE"
                             imageSource="/wines/keffraya-rouge.png"
-                            imageAlt="assiette baladi"
+                            imageAlt="bouteille de vin Feffraya Rouge"
                             classNameImage={classNames(styleCardSmall.Image)}
                         />
                         <CardSmall
                             text="KSARA SUNSET"
                             imageSource="/wines/ksara-sunset.png"
-                            imageAlt="assiette baladi"
+                            imageAlt="bouteille de vin Ksara Sunset"
                             classNameImage={classNames(styleCardSmall.Image)}
                         />
                         <CardSmall
                             text="KSARA BLANC DE BLANCS"
                             imageSource="/wines/ksara-blanc.png"
-                            imageAlt="assiette baladi"
+                            imageAlt="bouteille de vin Ksara Blanc de Blanc"
                             classNameImage={classNames(styleCardSmall.Image)}
                         />
                     </div>
@@ -227,7 +233,7 @@ function Home() {
                         <Button
                             title="TÉLÉCHARGER LE MENU"
                             className={classNames(styleButton.secondButton)}
-                            onClick={()=>''}
+                            pdfUrl={MenuPDF}
                         />
                     </div>
                     <div className={classNames(styleInfo.sectionHome)}>

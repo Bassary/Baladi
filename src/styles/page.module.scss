@@ -13,8 +13,14 @@
     padding-top: 132px;
 }
 
-.containerMotion {
+.containerMotion,
+.containerMotionCenter {
     width: 100%;
+}
+
+.containerMotionCenter {
+    display: flex;
+    justify-content: center;
 }
 
 // MEDIA QUERIES

@@ -36,6 +36,7 @@ function Contact() {
                         <strong> service traiteur</strong> ou <strong>privatisation </strong>
                         contacter nous par email ou par téléphone
                     </p>
+                    <p>Nous acceptons les réservations de groupe jusqu'à 40 personnes</p>
                     <div id='devis' className={classNames(styleButton.flexButtonRow)}>
                         <Button
                             title='baladi.rim@gmail.com'

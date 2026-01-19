@@ -119,31 +119,31 @@ function Privatisation() {
                 <CardSmall
                     text="RÉSERVE DU COUVENT"
                     imageSource="/wines/reserve-du-couvent.png"
-                    imageAlt="assiette baladi"
+                    imageAlt="bouteille de vin Réserve du couvant"
                     classNameImage={classNames(styleCardSmall.Image)}
                 />
                 <CardSmall
                     text="CHATEAU NAKAD"
                     imageSource="/wines/chateau-nakad.png"
-                    imageAlt="assiette baladi"
+                    imageAlt="bouteille de vin Chateau Nakad"
                     classNameImage={classNames(styleCardSmall.Image)}
                 />
                 <CardSmall
                     text="KEFFRAYA ROUGE"
                     imageSource="/wines/keffraya-rouge.png"
-                    imageAlt="assiette baladi"
+                    imageAlt="bouteille de vin Feffraya Rouge"
                     classNameImage={classNames(styleCardSmall.Image)}
                 />
                 <CardSmall
                     text="KSARA SUNSET"
                     imageSource="/wines/ksara-sunset.png"
-                    imageAlt="assiette baladi"
+                    imageAlt="bouteille de vin Ksara Sunset"
                     classNameImage={classNames(styleCardSmall.Image)}
                 />
                 <CardSmall
                     text="KSARA BLANC DE BLANCS"
                     imageSource="/wines/ksara-blanc.png"
-                    imageAlt="assiette baladi"
+                    imageAlt="bouteille de vin Ksara Blanc de Blanc"
                     classNameImage={classNames(styleCardSmall.Image)}
                 />
             </div>

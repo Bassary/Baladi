@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { useState } from "react";
+import { useState} from "react";
 import MenuItem from "./MenuItem";
 import Button from "./Button";
 import styleMenu from "../styles/menu.module.scss";
@@ -11,8 +11,8 @@ interface MenuItem {
     id: number;
     name: string;
     price: string;
-    imageSource: string;
-    imageAlt: string;
+    imageSource?: string;
+    imageAlt?: string;
     isVegan?: boolean;
     isVegetarien?: boolean;
 }
@@ -23,12 +23,14 @@ interface MenuProps {
     classNameItems?: string;
     classNameSubtitle?: string;
     ancreId?: string;
+    imageSource?: string;
+    imageAlt?: string;
 }
 
-
-function Menu({title, items, classNameItems, ancreId, classNameSubtitle} : MenuProps) {
+function Menu({title, items, classNameItems, ancreId, classNameSubtitle, imageSource, imageAlt} : MenuProps) {
     const [showAll, setShowAll] = useState(false);
-    const displayedItems = showAll ? items : items.slice(0, 3);
+
+    const displayedItems = showAll ? items : items.slice(0, 5);
 
     return (
         <div id={ancreId} className={classNames(styleMenu.containerMenu)}>
@@ -54,12 +56,15 @@ function Menu({title, items, classNameItems, ancreId, classNameSubtitle} : MenuP
                     </div>
                 </div>
             </div>
-            <div className={classNames(styleMenu.containerMenuItems)}>
+            <img src={imageSource} alt={imageAlt} className={classNames(styleMenu.containerMenuImage)}></img>
+            <div 
+                className={classNames(styleMenu.containerMenuItems)}
+            >
                 {displayedItems.map((item) => (
                     <MenuItem key={item.id} {...item}/>
                 ))}
             </div>
-            {items.length > 3 && (
+            {items.length > 5 && (
                 <Button
                     title={showAll ? 'VOIR MOINS' : 'VOIR PLUS'}
                     className={classNames(styleButton.secondButton)}
@@ -70,4 +75,5 @@ function Menu({title, items, classNameItems, ancreId, classNameSubtitle} : MenuP
     )
 }
 
-export default Menu;
+export default Menu
+
