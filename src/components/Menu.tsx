@@ -30,7 +30,7 @@ interface MenuProps {
 function Menu({title, items, classNameItems, ancreId, classNameSubtitle, imageSource, imageAlt} : MenuProps) {
     const [showAll, setShowAll] = useState(false);
 
-    const displayedItems = showAll ? items : items.slice(0, 5);
+    const displayedItems = showAll ? items : items.slice(0, 6);
 
     return (
         <div id={ancreId} className={classNames(styleMenu.containerMenu)}>
@@ -64,7 +64,7 @@ function Menu({title, items, classNameItems, ancreId, classNameSubtitle, imageSo
                     <MenuItem key={item.id} {...item}/>
                 ))}
             </div>
-            {items.length > 5 && (
+            {items.length > 6 && (
                 <Button
                     title={showAll ? 'VOIR MOINS' : 'VOIR PLUS'}
                     className={classNames(styleButton.secondButton)}

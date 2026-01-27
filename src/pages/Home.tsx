@@ -87,7 +87,7 @@ function Home() {
                     <CardLarge
                         ancreId="mezze-froids"
                         title="PLATS DU JOUR"
-                        subTitle1="Du lundi midi au vendredi midi pour 14,90€"
+                        subTitle1="DU LUNDI MIDI AU VENDREDI MIDI POUR 14,90€"
                         subTitle2="Appellez nous pour connaitre le plats du jour !"
                         imageSource="/plat-du-jour.png"
                         imageAlt="illustration du plat du jour"
@@ -107,35 +107,41 @@ function Home() {
                     <Menu
                         title="NOS MEZZÉS FROIDS"
                         items={mezzeFroidItems}
-                        imageSource="/dishes/assiette-baladi.png"
+                        imageSource="/mezze-froid.png"
+                        imageAlt="Assoritment de mezze froid: hoummos, caviar d'aubergine, feuille de vigne, labné"
                         classNameItems={style.containerMenuTitleInfo}
                     />
                 </FadeInScroll>
 
                 <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
-                    <Menu title="NOS MEZZÉS CHAUD" items={mezzeChaudItems} classNameItems={style.containerMenuTitleInfo}/>
+                    <Menu
+                        title="NOS MEZZÉS CHAUD"
+                        items={mezzeChaudItems}
+                        imageSource="/mezze-chaud.png"
+                        imageAlt="Assortiment de mezze chaud: falafel, kebbe, fatayer aux épinard, samboussek viande, rikakat aux frommage"
+                        classNameItems={style.containerMenuTitleInfo}/>
                 </FadeInScroll>
                 
                 <FadeInScroll delay={0.2}>
-                    <div className={classNames(styleCardSmall.flexHome)}>
+                    <div className={classNames(styleCardSmall.flexHomeCard)}>
                     <CardSmall
                         text="ASSIETTE BALADI"
                         price="14,90€"
-                        imageSource="/dishes/assiette-baladi.png"
+                        imageSource="/assiette-baladi.png"
                         imageAlt="assiette baladi"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="ASSIETTE VEGAN"
                         price="14,90€"
-                        imageSource="/dishes/assiette-baladi.png"
+                        imageSource="/assiette-vegan.png"
                         imageAlt="assiette vegan"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="ASSIETTE VÉGÉTARIENNE"
                         price="14,90€"
-                        imageSource="/dishes/assiette-baladi.png"
+                        imageSource="/assiette-végé.png"
                         imageAlt="assiette végétarienne"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
@@ -145,31 +151,50 @@ function Home() {
                 <FadeInScroll delay={0.2}>
                     <CardLarge
                         ancreId="grillades"
-                        title="MEZZÉS"
-                        subTitle1="Assortiments d’entrées froides et chaudes sélectionnés par le Chef"
-                        imageSource="/background-header.png"
+                        title="NOS MEZZÉS"
+                        subTitle1="ASSORTIMENT D'ENTRÉS FROIDES ET CHAUDES SÉLECTIONNÉES PAR LE CHEF"
+                        imageSource="/nos-mezze.png"
                         imageAlt="assortiement de mézzes froid et chaud"
                         backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
                         textColor={classNames(styleCardLarge.textColorLight)}
-                        // children= {
-                        //     <Button
-                        //         title="DÉCOUVRIR"
-                        //         className={classNames(styleButton.mainButton)}
-                        //         onClick={()=>''}
-                        //     />
-                        // }
+                        children= {
+                            <div className={classNames(styleCardLarge.containerMezze)}>
+                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
+                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 1 personne</p>
+                                    <p>19,80€</p>
+                                </div>
+                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
+                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 2 personnes</p>
+                                    <p>39,60€</p>
+                                </div>
+                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
+                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 3 personnes</p>
+                                    <p>59,40€</p>
+                                </div>
+                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
+                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 4 personnes</p>
+                                    <p>79,20€</p>
+                                </div>
+                            </div>
+                        }
                 />
                 </FadeInScroll>
 
                 <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
-                    <Menu title="NOS PLATS ET GRILLADES" items={platGrilladeItems} classNameItems={style.hiddenItems} classNameSubtitle={style.visibleSubtitle}/>
+                    <Menu
+                        title="NOS PLATS ET GRILLADES"
+                        items={platGrilladeItems}
+                        imageSource="/plat-grillade.png"
+                        imageAlt="Assortiment de grillade : chiche taouk, kefta accompagné d'une salde fraiche et riz blanc"
+                        classNameItems={style.hiddenItems}
+                        classNameSubtitle={style.visibleSubtitle}/>
                 </FadeInScroll>
                 
                 <FadeInScroll delay={0.2}>
                     <CardLarge
                         title="NOTRE MENU DÉCOUVERTE À 28€"
                         subTitle1="Assortiments d’entrées chauds et froids ainsi qu’un deux de brochette sélectionnés par le Chef"
-                        imageSource="/background-header.png"
+                        imageSource="/menu-decouverte.png"
                         imageAlt="assortiement de mézzes froid et chaud"
                         backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
                         textColor={classNames(styleCardLarge.textColorLight)}
@@ -177,14 +202,20 @@ function Home() {
                 </FadeInScroll>
                 
                 <FadeInScroll delay={0.2}>
-                    <Menu title="NOS DESSERT" items={dessertItems} classNameItems={style.hiddenItems}/>
+                    <Menu
+                        title="NOS DESSERT"
+                        items={dessertItems}
+                        imageSource="/dessert.png"
+                        imageAlt="Assortiment de baklawa"
+                        classNameItems={style.hiddenItems}
+                    />
                 </FadeInScroll>
                 
                 <FadeInScroll delay={0.2}>
                     <div className={classNames(styleCardSmall.flexTitleHome)}>
                     <h2>NOS VINS LIBANAIS</h2>
                     <p>À savourer en verre ou en bouteille</p>
-                    <div className={classNames(styleCardSmall.flexHome, styleCardSmall.marginTopWine)}>
+                    <div className={classNames(styleCardSmall.flexHomeCard, styleCardSmall.marginTopWine)}>
                         <CardSmall
                             text="RÉSERVE DU COUVENT"
                             imageSource="/wines/reserve-du-couvent.png"

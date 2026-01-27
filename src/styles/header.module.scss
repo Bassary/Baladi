@@ -9,6 +9,11 @@
     justify-content: center;
     padding-top: 118px;
     padding-bottom: 18px;
+    max-width: 1300px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: auto;
 }
 
 .containerHeader {
@@ -72,6 +77,7 @@
     .backgroundImage {
         padding-top: 70px;
         padding-bottom: 8px;
+        background-size: 170%;
     }
 
 

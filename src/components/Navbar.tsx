@@ -38,10 +38,11 @@ function Navbar() {
     return (
             <>
                 <nav className={classNames(navbarStyle.background, navbarStyle.navbarContainerFlex)}>
-                <div className={classNames(navbarStyle.baladiFlex)}>
+                    <div className={classNames(navbarStyle.baladiFlex)}>
                     <h1>BALADI</h1>
                     <p className={classNames(navbarStyle.baladiFlexText)}>Restaurant Libanais</p>
                 </div>
+                
 
                 {isMobile && (
                     <button

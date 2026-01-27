@@ -27,7 +27,7 @@ function About() {
             <Header
                 title="CRÉATEUR DE PLAISIR CULINAIRE DEPUIS 2003"
                 subTitle="CUSINE TRADITIONNELE ET FAMILIAL LIBANAISE"
-                imageURL="/public/background-header-about.jpg"
+                imageURL="/public/background-header-about.png"
                 children={
                     <div className={classNames(styleHeader.containerInfo)}>
                         <Info
@@ -106,7 +106,7 @@ function About() {
                             Situé entre le canal Saint-Martin et le parc des Buttes Chaumont,
                             votre restaurant <strong>Baladi</strong> est l’endroit idéal pour se régaler dans le 19ème arrondissement de Paris 
                         </p>
-                        <div className={classNames(styleCardSmall.flexHome)}>
+                        <div className={classNames(styleCardSmall.flexHomeCard, styleCardSmall.marginTopWine)}>
                             <CardSmall
                                 text="Restaurant Baladi"
                                 imageSource="/public/restaurant-baladi.jpg"

@@ -19,7 +19,8 @@ $background-opacity-light: #110300a1;
 // TEXTS
 
 @mixin main-text {
-    font-family: "Habibi", serif;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     font-style: normal;
     font-weight: 400;
 }
@@ -36,6 +37,7 @@ $background-opacity-light: #110300a1;
 
 @mixin text-h2 {
     font-size: 40px;
+    font-weight: 500;
 }
 
 @mixin text-h3 {
@@ -71,7 +73,9 @@ h2,
 h3,
 h4,
 p,
-span {
+span,
+a,
+li {
     @include main-text()
 }
 

@@ -1,5 +1,5 @@
  import classNames from "classnames";
- import styleCardLarg from "../styles/cardLarge.module.scss"
+ import styleCardLarg from "../styles/cardLarge.module.scss";
 
 interface cardLargProps {
     title: string;
@@ -23,7 +23,7 @@ function CardLarge({title, subTitle1, subTitle2, imageSource, children, imageAlt
                     <div className={classNameOption}>
                         <h3>{option}</h3>
                     </div>
-                    <h2>{title}</h2>
+                    <h2 className={classNames(styleCardLarg.textH2)}>{title}</h2>
                     <p className={classNames(styleCardLarg.containerSubtitle1)}>{subTitle1}</p>
                     {subTitle2 && (
                     <p>{subTitle2}</p>

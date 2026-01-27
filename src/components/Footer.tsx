@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import Infos from "./Info";
+import MenuBaladi from '../../public/Menu-Baladi.pdf'
 
 import styleFooter from "../styles/footer.module.scss";
 import classNames from "classnames";
@@ -43,7 +44,8 @@ function Footer() {
                 </li>
                 <li>
                     <NavLink
-                        to={'/'}
+                        to={MenuBaladi}
+                        target="_blank"
                     >TÉLÉCHARGER LE MENU</NavLink>
                 </li>
                 <li>

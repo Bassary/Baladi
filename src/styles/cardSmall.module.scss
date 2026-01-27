@@ -1,13 +1,17 @@
 @use './globalStyle.scss' as *;
 
+.sectionCardWidth {
+    width: 800px;
+}
 
 .containerCardSmall {
-    height: 200px;
+    height: 240px;
+    width: 240px;
 }
 
 .Image {
-    height: 200px;
-    width: 200px;
+    height: 240px;
+    width: 240px;
     position: absolute;
     border-radius: 10px;
     @include box-shadow;
@@ -22,8 +26,8 @@
 .containerText {
     color: #ffffff;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     z-index: 9;
     text-align: center;
     display: flex;
@@ -39,13 +43,13 @@
     }
 }
 
-.flexHome {
+.flexHomeCard {
     display: flex;
-    gap: 18px;
+    gap: 40px;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 18px;
     justify-content: center;
+    width: auto;
 }
 
 .flexTitleHome {

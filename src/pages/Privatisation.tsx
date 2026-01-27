@@ -47,7 +47,7 @@ function Privatisation() {
                             <Info
                             iconColor="#FFF"
                             iconName="solar:phone-linear"
-                            textInfo="01 42 41 84 32"
+                            textInfo="06 13 54 33 57"
                             />
                         </div>
                     </div>
@@ -87,7 +87,7 @@ function Privatisation() {
                             <li>TOUT TYPE D'ÉVÉNEMENT</li>
                             <li>SERVICE À TABLE OU AVEC BUFFET</li>
                             <li>MEZZÉ FROIDS ET CHAUDS</li>
-                            <li>GRILLADES</li>
+                            <li>GRILLADES ET PLATS</li>
                             <li>JUSQU'À 40 PERSONNES</li>
                             <li>DEMANDE SUR DEVIS</li>
                          </ul>
@@ -115,7 +115,7 @@ function Privatisation() {
             <section className={classNames(styleCardSmall.flexTitleHome, styleCardSmall.marginTopContainerWine)}>
             <h2>ACCOMPAGNEZ VOS PLATS DE VINS LIBANAIS</h2>
             <p>À savourer en verre ou en bouteille</p>
-            <div className={classNames(styleCardSmall.flexHome, styleCardSmall.marginTopWine)}>
+            <div className={classNames(styleCardSmall.flexHomeCard, styleCardSmall.marginTopWine)}>
                 <CardSmall
                     text="RÉSERVE DU COUVENT"
                     imageSource="/wines/reserve-du-couvent.png"
