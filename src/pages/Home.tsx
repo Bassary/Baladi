@@ -39,7 +39,7 @@ function Home() {
             <Header
                 title="AUTHENTIQUE, TRADITIONNEL, FAMILIALE"
                 subTitle="DEPUIS PLUS DE 20ANS"
-                imageURL="/public/background-header.png"
+                imageURL="/background-header.png"
                 children={
                     <div className={classNames(styleHeader.containerInfo)}>
                         <Info

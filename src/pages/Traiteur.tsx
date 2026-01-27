@@ -31,7 +31,7 @@ function Traiteur() {
         <Header
                 title="DÉCOUVREZ NOS OFFRES TRAITEUR"
                 subTitle="Commendez par email ou par téléphone"
-                imageURL="/public/background-header-traiteur.png"
+                imageURL="/background-header-traiteur.png"
                 children={
                     <div className={classNames(styleHeader.containerInfoBottom)}>
                         <Info

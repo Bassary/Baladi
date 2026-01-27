@@ -30,7 +30,7 @@ function Privatisation() {
             <Header
                 title="RÉUNISSEZ LES GENS QUE VOUS AIMEZ"
                 subTitle="Contactez nous par email ou par téléphone"
-                imageURL="/public/background-header-privatisation.png"
+                imageURL="/background-header-privatisation.png"
                 children={
                     <div className={classNames(styleHeader.containerInfo)}>
                         <Info

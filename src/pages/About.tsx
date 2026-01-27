@@ -27,7 +27,7 @@ function About() {
             <Header
                 title="CRÉATEUR DE PLAISIR CULINAIRE DEPUIS 2003"
                 subTitle="CUSINE TRADITIONNELE ET FAMILIAL LIBANAISE"
-                imageURL="/public/background-header-about.png"
+                imageURL="/background-header-about.png"
                 children={
                     <div className={classNames(styleHeader.containerInfo)}>
                         <Info
