@@ -32,9 +32,9 @@ function Contact() {
 
             <FadeInScroll delay={0.2}>
                 <div className={classNames(styleTitle.containerContact)}>
-                    <p>Pour toute demande de <strong>reservation</strong>,
+                    <p>Pour toute demande de <strong>réservation</strong>,
                         <strong> service traiteur</strong> ou <strong>privatisation </strong>
-                        contacter nous par email ou par téléphone
+                        contactez-nous par email ou par téléphone
                     </p>
                     <p>Nous acceptons les réservations de groupe jusqu'à 40 personnes</p>
                     <div id='devis' className={classNames(styleButton.flexButtonRow)}>
@@ -56,7 +56,7 @@ function Contact() {
         <FadeInScroll delay={0.3}>
             <section className={classNames(styleInfo.sectionTraiteur)}>
                 <h2 className={classNames(styleTitle.titleH2)}>DEVIS</h2>
-                <p>Pour une demande de <strong>devis</strong> ou toutes <strong>inforamtions supplémentaire</strong>, contactez-nous au :
+                <p>Pour une demande de <strong>devis</strong> ou toute <strong>information supplémentaire</strong>, contactez-nous :
                 </p>
                 <div className={classNames(styleButton.flexButtonRow)}>
                     <Button
@@ -79,7 +79,7 @@ function Contact() {
 
                     <div className={classNames(styleInfo.sectionContact)}>
                         <div className={classNames(styleInfo.sectionContactInfo)}>
-                            <h3>Adresse et Horaire : </h3>
+                            <h3>Adresse et Horaires : </h3>
                             <Info
                                 iconColor="#153114"
                                 iconName="eva:pin-outline"
@@ -89,7 +89,7 @@ function Contact() {
                             <Info
                                 iconColor="#153114"
                                 iconName="simple-icons:metrodeparis"
-                                textInfo="Laumières / Jaures"
+                                textInfo="Laumière / Jaurès"
                                 classNameDiv={classNames(styleInfo.infoMenuHome)}
                             />
                             <Info
@@ -104,13 +104,13 @@ function Contact() {
                             <Info
                                 iconColor="#153114"
                                 iconName="ph:users"
-                                textInfo="Pour socitée ou Privé"
+                                textInfo="Entreprises ou Particuliers"
                                 classNameDiv={classNames(styleInfo.infoMenuHome)}
                             />
                             <Info
                                 iconColor="#153114"
                                 iconName="eva:pin-outline"
-                                textInfo="Livraison dans Paris et sa Banlieux"
+                                textInfo="Livraison dans Paris et sa banlieue"
                                 classNameDiv={classNames(styleInfo.infoMenuHome)}
                             />
                             <Button

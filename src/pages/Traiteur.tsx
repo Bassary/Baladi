@@ -54,7 +54,7 @@ function Traiteur() {
                             onClick={()=>handleChange('/contact/#devis')}
                          />
                         <Button
-                            title="PRIVATISEZ LE RESTAURANT"
+                            title="PRIVATISER LE RESTAURANT"
                             className={styleButton.headerSecondButton}
                             onClick={()=>handleChange('/privatisation')}
                          />
@@ -77,8 +77,8 @@ function Traiteur() {
                         children={
                             <>
                                 <h2>MEZZÉ CHAUD ET FROID</h2>
-                                <p>Découvrez un assortiment de plats chauds et froids typique de la cuisine libanaise.
-                                    <br></br>Savourez des mets variés qui feront l'unanimité, le choix idéal pour des moments conviviaux et de partage
+                                <p>Découvrez un assortiment de plats chauds et froids typiques de la cuisine libanaise.
+                                    <br></br>Savourez des mets variés qui feront l'unanimité. Le choix idéal pour des moments conviviaux et de partage
                                 </p>
                                 <Button
                                     title="VOIR LA CARTE"
@@ -155,13 +155,13 @@ function Traiteur() {
                         <Info
                             iconColor="#153114"
                             iconName="ph:users"
-                            textInfo="Pour socitée ou Privé"
+                            textInfo="Entreprises ou particuliers"
                             classNameDiv={classNames(styleInfo.infoMenuHome)}
                         />
                         <Info
                             iconColor="#153114"
                             iconName="eva:pin-outline"
-                            textInfo="Livraison dans Paris et sa Banlieux"
+                            textInfo="Livraison dans Paris et sa banlieue"
                             classNameDiv={classNames(styleInfo.infoMenuHome)}
                         />
                         <Info
@@ -177,7 +177,7 @@ function Traiteur() {
                             classNameDiv={classNames(styleInfo.infoMenuHome)}
                         />
                 </div>
-                <h3>Pour toutes inforamtion ou question n’hésitez pas à nous contacter,<br></br>
+                <h3>Pour toute question ou information contactez-nous,<br></br>
                     nous nous ferons un plaisir de vous répondre
                 </h3>
                 <Button

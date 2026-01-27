@@ -26,7 +26,7 @@ function About() {
         <>
             <Header
                 title="CRÉATEUR DE PLAISIR CULINAIRE DEPUIS 2003"
-                subTitle="CUSINE TRADITIONNELE ET FAMILIAL LIBANAISE"
+                subTitle="CUSINE TRADITIONNELLE ET FAMILIALE LIBANAISE"
                 imageURL="/background-header-about.png"
                 children={
                     <div className={classNames(styleHeader.containerInfo)}>
@@ -39,7 +39,7 @@ function About() {
                             <Info
                             iconColor="#FFF"
                             iconName="eva:pin-outline"
-                            textInfo="105 rue de meaux, Paris 19ème"
+                            textInfo="105 rue de Meaux, Paris 19ème"
                             />
                             <Info
                             iconColor="#FFF"
@@ -76,7 +76,7 @@ function About() {
                 <FadeInScroll delay={0.2}>
                     <section className={classNames(styleTitle.containerTradition)}>
                         <h2>
-                            UN PEU DE TRADITION BEAUCOUP DE SOUVENIR
+                            UN PEU DE TRADITION, BEAUCOUP DE SOUVENIRS
                         </h2>
                         <div>
                             <p className={classNames(styleTitle.titleH2, styleTitle.braquettes)}>"</p>
@@ -90,8 +90,8 @@ function About() {
                                     quand nous partagions un bon repas tous ensemble.
                                 </p>
                                 <p>
-                                    Retrouver cette ambiance chaleureuse et accueillante autour de plats qui font la renommée de la gastronomie Libanaise,
-                                    c’est ce qui nous a menés aujourd’hui à se lancer dans l’aventure Baladi.
+                                    Retrouver cette ambiance chaleureuse et accueillante autour de plats qui font la renommée de la gastronomie libanaise,
+                                    c’est ce qui nous a menés aujourd’hui à nous lancer dans l’aventure Baladi.
                                 </p>
                             </div>
                             <p className={classNames(styleTitle.titleH2, styleTitle.braquettes, styleTitle.braquetteRight)}>"</p>
@@ -103,37 +103,37 @@ function About() {
                     <section className={classNames(styleCardSmall.flexTitleHome)}>
                         <h2>AU COEUR D'UN QUARTIER VIVANT</h2>
                         <p className={classNames(styleTitle.textQuartier)}>
-                            Situé entre le canal Saint-Martin et le parc des Buttes Chaumont,
+                            Situé entre le canal Saint-Martin et le parc des Buttes-Chaumont,
                             votre restaurant <strong>Baladi</strong> est l’endroit idéal pour se régaler dans le 19ème arrondissement de Paris 
                         </p>
                         <div className={classNames(styleCardSmall.flexHomeCard, styleCardSmall.marginTopWine)}>
                             <CardSmall
                                 text="Restaurant Baladi"
-                                imageSource="/public/restaurant-baladi.jpg"
+                                imageSource="/restaurant-baladi.jpg"
                                 imageAlt="deventure du restaurant Baladi"
                                 classNameImage={classNames(styleCardSmall.ImageCover, styleCardSmall.Image)}
                             />
                             <CardSmall
                                 text="Chalêt Alpin"
-                                imageSource="/public/chalet-alpin.jpeg"
+                                imageSource="/chalet-alpin.jpeg"
                                 imageAlt="deventure du chalêt aplin du 19ème arrondissement de Paris"
                                 classNameImage={classNames(styleCardSmall.ImageCover, styleCardSmall.Image)}
                             />
                             <CardSmall
                                 text="La Villette"
-                                imageSource="/public/villette.jpg"
+                                imageSource="/villette.jpg"
                                 imageAlt="Parc de la Villette dans le 19ème arrondissement de Paris"
                                 classNameImage={classNames(styleCardSmall.ImageCover, styleCardSmall.Image)}
                             />
                             <CardSmall
-                                text="Buttes Chaumont"
-                                imageSource="/public/buttes-chaumont.jpeg"
+                                text="Buttes-Chaumont"
+                                imageSource="/buttes-chaumont.jpeg"
                                 imageAlt="Parc des Buttes Chaumont dans le 19ème arrondissement de Paris"
                                 classNameImage={classNames(styleCardSmall.ImageCover, styleCardSmall.Image)}
                             />
                             <CardSmall
                                 text="Canal Saint-Martin"
-                                imageSource="/public/canal.jpg"
+                                imageSource="/canal.jpg"
                                 imageAlt="Canal Saint-Martin dans le 19ème arrondissement de Paris"
                                 classNameImage={classNames(styleCardSmall.ImageCover, styleCardSmall.Image)}
                             />
@@ -162,7 +162,7 @@ function About() {
                             La terre c’est Baladi<br></br>
                             Un brin de soleil<br></br>
                             Couleurs et saveurs de mon pays<br></br>
-                            Sous le cial de Paris<br></br>
+                            Sous le ciel de Paris<br></br>
                             La vie est Belle<br></br>
                             Bon appétit !<br></br>
                         </p>

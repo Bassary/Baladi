@@ -52,7 +52,7 @@ export const mezzeFroidItems: MenuItem[] = [
     },
     {
         id: 6,
-        name: `Moutabal (caviar d'aubergine')`,
+        name: `Moutabal (caviar d'aubergine)`,
         subtitle: "Aubergines grillées, crème de sésame citronnée, huile d’olive",
         price: '7,00€',
         isVegan: true,
@@ -93,7 +93,7 @@ export const mezzeFroidItems: MenuItem[] = [
     {
         id: 11,
         name: `Bastorma`,
-        subtitle: "Viande de bœuf séchée, épicée",
+        subtitle: "Viande de bœuf séchée et épicée",
         price: '8,90€',
         isVegan: false,
         isVegetarien: false,

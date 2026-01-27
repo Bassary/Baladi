@@ -35,7 +35,7 @@ export const mezzeChaudItems: MenuItem[] = [
     },
     {
         id: 3,
-        name: 'Balila (salade de pois chiche)',
+        name: 'Balila (salade de pois chiches)',
         price: '7,50€',
         subtitle: 'Pois chiches cuits, ail, citron, huile d’olive',
         // imageSource: '/dishes/falafel.png',
@@ -46,8 +46,8 @@ export const mezzeChaudItems: MenuItem[] = [
     },
     {
         id: 4,
-        name: 'Falafel',
-        subtitle: 'Croquette de fèves et pois chiches, sauce Tarator',
+        name: 'Falafels',
+        subtitle: 'Croquettes de fèves et pois chiches, sauce Tarator',
         price: '6,90€',
         // imageSource: '/dishes/foul-moudamas.png',
         // imageAlt: 'photo foul moudamas, salade de fèves',
@@ -124,7 +124,7 @@ export const mezzeChaudItems: MenuItem[] = [
     },
     {
         id: 12,
-        name: 'Jawaneh (ailerons de poulet grillés)',
+        name: 'Jawaneh',
         subtitle: 'Ailerons de poulet grillés, marinés à l’ail, coriandre, citron',
         price: '8,90€',
         isVegan: false,

@@ -37,26 +37,26 @@ function Home() {
     return (
         <>
             <Header
-                title="AUTHENTIQUE, TRADITIONNEL, FAMILIALE"
-                subTitle="DEPUIS PLUS DE 20ANS"
+                title="AUTHENTIQUE, TRADITIONNEL, FAMILIAL"
+                subTitle="DEPUIS PLUS DE 20 ANS"
                 imageURL="/background-header.png"
                 children={
                     <div className={classNames(styleHeader.containerInfo)}>
                         <Info
                         iconColor="#FFF"
                         iconName="tabler:clock"
-                        textInfo="Ouvert 7/7 de 12h00-14h30/18h30-22h30"
+                        textInfo="Ouvert 7/7 de 12h00-14h30 / 18h30-22h30"
                         />
                         <div className={classNames(styleHeader.containerInfoBottom)}>
                             <Info
                             iconColor="#FFF"
                             iconName="eva:pin-outline"
-                            textInfo="105 rue de meaux, Paris 19ème"
+                            textInfo="105 rue de Meaux, Paris 19ème"
                             />
                             <Info
                             iconColor="#FFF"
                             iconName="simple-icons:metrodeparis"
-                            textInfo="Laumière/Jaurès"
+                            textInfo="Laumière / Jaurès"
                             />
                         </div>
                     </div>
@@ -88,7 +88,7 @@ function Home() {
                         ancreId="mezze-froids"
                         title="PLATS DU JOUR"
                         subTitle1="DU LUNDI MIDI AU VENDREDI MIDI POUR 14,90€"
-                        subTitle2="Appellez nous pour connaitre le plats du jour !"
+                        subTitle2="Appellez-nous pour connaître le plat du jour !"
                         imageSource="/plat-du-jour.png"
                         imageAlt="illustration du plat du jour"
                         backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
@@ -152,7 +152,7 @@ function Home() {
                     <CardLarge
                         ancreId="grillades"
                         title="NOS MEZZÉS"
-                        subTitle1="ASSORTIMENT D'ENTRÉS FROIDES ET CHAUDES SÉLECTIONNÉES PAR LE CHEF"
+                        subTitle1="ASSORTIMENT D'ENTRÉES FROIDES ET CHAUDES SÉLECTIONNÉES PAR LE CHEF"
                         imageSource="/nos-mezze.png"
                         imageAlt="assortiement de mézzes froid et chaud"
                         backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
@@ -271,19 +271,19 @@ function Home() {
                     <Info
                         iconColor="#153114"
                         iconName="game-icons:france"
-                        textInfo="Produit locaux"
+                        textInfo="Produits locaux"
                         classNameDiv={classNames(styleInfo.infoMenuHome)}
                     />
                     <Info
                         iconColor="#153114"
                         iconName="temaki:meat"
-                        textInfo="Viande origine : France, Europe"
+                        textInfo="Origine viande : France, Europe"
                         classNameDiv={classNames(styleInfo.infoMenuHome)}
                     />
                     <Info
                         iconColor="#153114"
                         iconName="lineicons:leaf-1"
-                        textInfo="Produits Frais"
+                        textInfo="Produits frais"
                         classNameDiv={classNames(styleInfo.infoMenuHome)}
                     />
                     <Info

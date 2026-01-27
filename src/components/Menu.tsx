@@ -36,7 +36,7 @@ function Menu({title, items, classNameItems, ancreId, classNameSubtitle, imageSo
         <div id={ancreId} className={classNames(styleMenu.containerMenu)}>
             <div className={classNames(styleMenu.containerMenuTitle)}>
                 <h3>{title}</h3>
-                <p className={`${styleMenu.hiddenSubtitle} ${classNameSubtitle}`}>Servie avec riz et salade sauce citron et huile d'olive</p>
+                <p className={`${styleMenu.hiddenSubtitle} ${classNameSubtitle}`}>Servis avec riz et salade sauce citron et huile d'olive</p>
                 <div className={`${styleMenu.containerMenuTitleInfo} ${classNameItems}`}>
                     <div className={classNames(styleMenu.containerMenuTitleInfoFlex)}>
                         <Icon

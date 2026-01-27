@@ -75,7 +75,7 @@ function Footer() {
                         <Infos
                             iconColor="#FFF"
                             iconName="si:pin-line"
-                            textInfo="105 rue de meaux, Paris 19ème"
+                            textInfo="105 rue de Meaux, Paris 19ème"
                         />
                         <Infos
                             iconColor="#FFF"

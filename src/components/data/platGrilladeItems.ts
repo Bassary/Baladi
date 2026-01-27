@@ -29,8 +29,8 @@ export const platGrilladeItems: MenuItem[] = [
     },
     {
         id: 3,
-        name: `Brochette de Bœuf ou d’Agneau`,
-        subtitle: 'Brochette de bœuf ou d’agneau',
+        name: `Brochettes de Bœuf ou d’Agneau`,
+        // subtitle: 'Brochette de bœuf ou d’agneau',
         price: '17,90€',
         isVegan: false,
         isVegetarien: false,
@@ -54,7 +54,7 @@ export const platGrilladeItems: MenuItem[] = [
     {
         id: 6,
         name: `Farrouj Méchoui`,
-        subtitle: 'Coquelet désossé poêlé mariné au citron et à l’ail',
+        subtitle: 'Coquelet désossé, poêlé et mariné au citron et à l’ail',
         price: '18,00€',
         isVegan: false,
         isVegetarien: false,

@@ -36,7 +36,7 @@ function Privatisation() {
                         <Info
                         iconColor="#FFF"
                         iconName="eva:pin-outline"
-                        textInfo="Livraison possible dans Paris et sa Banlieux"
+                        textInfo="Livraison possible dans Paris et sa banlieue"
                         />
                         <div className={classNames(styleHeader.containerInfoBottom)}>
                             <Info
@@ -55,7 +55,7 @@ function Privatisation() {
                 button= {
                     <div className={classNames(styleButton.flexButtonRow)}>
                         <Button
-                            title="DEMENDER UN DEVIS"
+                            title="DEMENDEZ UN DEVIS"
                             className={styleButton.mainButton}
                             onClick={()=>handleChange('/contact/#devis')}
                         />
@@ -80,13 +80,13 @@ function Privatisation() {
             <FadeInScroll delay={0.3}>
                 <div className={classNames(styleCardLarge.containerOptionTraiteur)}>
                 <CardFlex
-                    title="Infos Pratique"
+                    title="Infos Pratiques"
                     children={
                         <>
                         <ul>
                             <li>TOUT TYPE D'ÉVÉNEMENT</li>
-                            <li>SERVICE À TABLE OU AVEC BUFFET</li>
-                            <li>MEZZÉ FROIDS ET CHAUDS</li>
+                            <li>SERVICE À TABLE OU BUFFET</li>
+                            <li>MEZZÉS FROIDS ET CHAUDS</li>
                             <li>GRILLADES ET PLATS</li>
                             <li>JUSQU'À 40 PERSONNES</li>
                             <li>DEMANDE SUR DEVIS</li>
