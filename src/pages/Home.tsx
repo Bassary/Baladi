@@ -22,6 +22,7 @@ import styleCardSmall from '../styles/cardSmall.module.scss';
 import styleTitle from '../styles/title.module.scss';
 import stylePage from '../styles/page.module.scss';
 import styleCardLarge from '../styles/cardLarge.module.scss'
+import { mezzeItems } from "../components/data/mezzeItems";
 
 
 function Home() {
@@ -147,41 +148,19 @@ function Home() {
                     />
                 </div>
                 </FadeInScroll>
-
-                <FadeInScroll delay={0.2}>
-                    <CardLarge
-                        ancreId="grillades"
-                        title="NOS MEZZÉS"
-                        subTitle1="ASSORTIMENT D'ENTRÉES FROIDES ET CHAUDES SÉLECTIONNÉES PAR LE CHEF"
-                        imageSource="/nos-mezze.png"
-                        imageAlt="assortiement de mézzes froid et chaud"
-                        backgroundColor={classNames(styleCardLarge.backgroundColorBrown)}
-                        textColor={classNames(styleCardLarge.textColorLight)}
-                        children= {
-                            <div className={classNames(styleCardLarge.containerMezze)}>
-                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
-                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 1 personne</p>
-                                    <p>19,80€</p>
-                                </div>
-                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
-                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 2 personnes</p>
-                                    <p>39,60€</p>
-                                </div>
-                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
-                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 3 personnes</p>
-                                    <p>59,40€</p>
-                                </div>
-                                <div className={classNames(styleCardLarge.containerMezzeChild)}>
-                                    <p className={classNames(styleCardLarge.containerMezzeChildText)}>Pour 4 personnes</p>
-                                    <p>79,20€</p>
-                                </div>
-                            </div>
-                        }
-                />
+                <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
+                 <Menu
+                    
+                    title="NOS MEZZÉS"
+                    imageSource="/nos-mezze.png"
+                    imageAlt="Assortiment de mezzé chaud et froid"
+                    items={mezzeItems}
+                 ></Menu>
                 </FadeInScroll>
 
-                <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
+                <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)} >
                     <Menu
+                        ancreId="grillades"
                         title="NOS PLATS ET GRILLADES"
                         items={platGrilladeItems}
                         imageSource="/plat-grillade.png"

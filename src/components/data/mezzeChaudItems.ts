@@ -70,7 +70,7 @@ export const mezzeChaudItems: MenuItem[] = [
         id: 6,
         name: 'Kébé Boulettes',
         subtitle: 'Boulettes de blé concassé, farcies à la viande hachée et pignons de pin',
-        price: '6,90€',
+        price: '7,50€',
         // imageSource: '/dishes/samboussek.png',
         // imageAlt: 'photo samboussek à la viande de boeuf, chausson fouré à la viande',
         isVegan: false,
@@ -108,7 +108,7 @@ export const mezzeChaudItems: MenuItem[] = [
         id: 10,
         name: 'Rikakat',
         subtitle: 'Feuilles de brick fourrées au fromage',
-        price: '7,90€',
+        price: '6,90€',
         isVegan: false,
         isVegetarien: true, 
 
@@ -117,7 +117,7 @@ export const mezzeChaudItems: MenuItem[] = [
         id: 11,
         name: 'Foie de Volaille',
         subtitle: 'Foie de volaille poêlé à la mélasse de grenade, tomates, menthe',
-        price: '6,90€',
+        price: '7,90€',
         isVegan: false,
         isVegetarien: false, 
 
@@ -126,7 +126,7 @@ export const mezzeChaudItems: MenuItem[] = [
         id: 12,
         name: 'Jawaneh',
         subtitle: 'Ailerons de poulet grillés, marinés à l’ail, coriandre, citron',
-        price: '8,90€',
+        price: '6,90€',
         isVegan: false,
         isVegetarien: false, 
 

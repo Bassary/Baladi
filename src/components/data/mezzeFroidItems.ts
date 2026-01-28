@@ -69,7 +69,7 @@ export const mezzeFroidItems: MenuItem[] = [
     {
         id: 8,
         name: `Chankliche`,
-        subtitle: "Tranches fines de viande de bœuf séchées et épicées",
+        subtitle: "Fromage salé aux thym et aux épices, tomate oignon",
         price: '7,00€',
         isVegan: false,
         isVegetarien: false,
@@ -85,7 +85,7 @@ export const mezzeFroidItems: MenuItem[] = [
     {
         id: 10,
         name: `Moussa’ka`,
-        subtitle: "Aubergines grillées, tomates fraîches, pois chiches",
+        subtitle: "Aubergines grillées, tomates fraîches, pois chiches, oignon, ail",
         price: '7,60€',
         isVegan: true,
         isVegetarien: false,
@@ -109,7 +109,7 @@ export const mezzeFroidItems: MenuItem[] = [
     {
         id: 12,
         name: `Kafta nayé ou Habra nayé ou Kébé nayé`,
-        subtitle: "Viande hachée crue, persil, oignons",
+        subtitle: "Viande pilée crue, persil, oignons",
         price: '12,50€',
         isVegan: false,
         isVegetarien: false,
@@ -124,6 +124,7 @@ export const mezzeFroidItems: MenuItem[] = [
     {
         id: 14,
         name: `Makdouce`,
+        subtitle: 'Aubergines en condiment, ail, piment',
         price: '6,00€',
         isVegan: true,
         isVegetarien: false,

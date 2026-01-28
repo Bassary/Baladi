@@ -97,7 +97,7 @@ function Traiteur() {
                         <>
                             <h2>MEZZÉ GRILLADES</h2>
                             <p>Optez pour un assortiment gourmand de grillades, telles que les brochettes de poulet mariné ou de kefta.
-                                Le choix idéal pour les moments festifs et chaleureux.
+                                Le choix idéal pour les moments festifs et chaleureux
                             </p>
                             <Button
                                 title="VOIR LA CARTE"
@@ -108,6 +108,37 @@ function Traiteur() {
                         }
                     />
                 </FadeInScroll>
+                <h2>OU</h2>
+                 <FadeInScroll delay={0.2}>
+                     <CardFlex
+                        title="Option 3"
+                        children={
+                        <>
+                            <h2>PLATEAUX REPATS</h2>
+                            <p>Commandez vos plateaux repas, assortiment de mezzé chaud, froid, grillades ou Plats du Jour.
+                                L'option parfaite pour les petits plaisirs du quotidien
+                            </p>
+                            {/* <Button
+                                title="VOIR LA CARTE"
+                                className={classNames(styleButton.mainButton)}
+                                onClick={()=> handleChange('/#grillades')}
+                            /> */}
+                        </>
+                        }
+                    />
+                </FadeInScroll>
+                <div className={classNames(styleButton.flexButtonRow)}>
+                    <Button
+                        title='baladi.rim@gmail.com'
+                        className={classNames(styleButton.mainButton)}
+                        mailto='baladi.rim@gmail.com'
+                    />
+                    <Button
+                        title='06 13 54 33 57'
+                        className={classNames(styleButton.secondButton)}
+                        tel='06 13 54 33 57'
+                    />
+                </div>
             </div>
             <FadeInScroll delay={0.2}>
             <section className={classNames(styleCardSmall.flexTitleHome, styleCardSmall.marginTopContainerWine)}>
@@ -115,10 +146,10 @@ function Traiteur() {
                 <p>À savourer en verre ou en bouteille</p>
                 <div className={classNames(styleCardSmall.flexHomeCard, styleCardSmall.marginTopWine)}>
                    <CardSmall
-                            text="RÉSERVE DU COUVENT"
-                            imageSource="/wines/reserve-du-couvent.png"
-                            imageAlt="bouteille de vin Réserve du couvant"
-                            classNameImage={classNames(styleCardSmall.Image)}
+                        text="RÉSERVE DU COUVENT"
+                        imageSource="/wines/reserve-du-couvent.png"
+                        imageAlt="bouteille de vin Réserve du couvant"
+                        classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="CHATEAU NAKAD"

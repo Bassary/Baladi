@@ -12,7 +12,7 @@ export interface MenuItem {
 export const dessertItems: MenuItem[] = [
     {
         id: 1,
-        name: `Baklawa`,
+        name: `Baklawa (3 pièces)`,
         subtitle: 'Pâtisserie orientale à base de pâte filo, noix et miel',
         price: '4,00€',
         isVegan: false,
@@ -30,20 +30,28 @@ export const dessertItems: MenuItem[] = [
         id: 3,
         name: `Mamoul Dattes`,
         subtitle: 'Pâtisserie fourrée aux dattes (1 pièce)',
-        price: '2,90€',
+        price: '4,00€',
         isVegan: false,
         isVegetarien: false,
     },
     {
         id: 4,
-        name: `Mamoul Pistache`,
-        subtitle: 'Pâtisserie fourrée à la pistache (1 pièce)',
-        price: '2,90€',
+        name: `Mamoul Noix`,
+        subtitle: 'Pâtisserie fourrée aux dattes (1 pièce)',
+        price: '4,00€',
         isVegan: false,
         isVegetarien: false,
     },
     {
         id: 5,
+        name: `Mamoul Pistache`,
+        subtitle: 'Pâtisserie fourrée à la pistache (1 pièce)',
+        price: '4,00€',
+        isVegan: false,
+        isVegetarien: false,
+    },
+    {
+        id: 6,
         name: `Karabij`,
         subtitle: 'Mini sablé pistache avec crème fouettée',
         price: '6,00€',
@@ -52,7 +60,7 @@ export const dessertItems: MenuItem[] = [
     },
 
     {
-        id: 6,
+        id: 7,
         name: `Fruits de Saison`,
         subtitle: 'Assortiment de fruits frais selon la saison',
         price: '7,00€',

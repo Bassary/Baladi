@@ -14,6 +14,7 @@ import styleCardLarge from "../styles/cardLarge.module.scss";
 import styleTitle from "../styles/title.module.scss";
 import stylePage from "../styles/page.module.scss";
 import styleCardSmall from "../styles/cardSmall.module.scss";
+import styleCardFlex from "../styles/CardFlex.module.scss";
 
 
 function Privatisation() {
@@ -77,13 +78,13 @@ function Privatisation() {
                 </div>
             </FadeInScroll>
 
-            <FadeInScroll delay={0.3}>
+            <FadeInScroll delay={0.3} className={classNames(stylePage.containerMotionCenter)}>
                 <div className={classNames(styleCardLarge.containerOptionTraiteur)}>
                 <CardFlex
                     title="Infos Pratiques"
                     children={
                         <>
-                        <ul>
+                        <ul className={classNames(styleCardFlex.containerCardFlexUl)}>
                             <li>TOUT TYPE D'ÉVÉNEMENT</li>
                             <li>SERVICE À TABLE OU BUFFET</li>
                             <li>MEZZÉS FROIDS ET CHAUDS</li>
