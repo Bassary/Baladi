@@ -9,7 +9,7 @@ const {SlideDown, SlideUp} = Animations
 
 type headerProps = {
     title: string;
-    subTitle: string;
+    subTitle?: string;
     button?: React.ReactNode;
     children?: React.ReactNode;
     imageURL: string;

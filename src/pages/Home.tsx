@@ -11,6 +11,7 @@ import { platGrilladeItems } from "../components/data/platGrilladeItems";
 import { useNavigate } from "react-router-dom";
 import Animations from "../components/animation/Animations";
 import MenuPDF from '../../public/Menu-Baladi.pdf'
+import { mezzeItems } from "../components/data/mezzeItems";
 
 // STYLE
 import style from "../styles/menu.module.scss";
@@ -22,7 +23,7 @@ import styleCardSmall from '../styles/cardSmall.module.scss';
 import styleTitle from '../styles/title.module.scss';
 import stylePage from '../styles/page.module.scss';
 import styleCardLarge from '../styles/cardLarge.module.scss'
-import { mezzeItems } from "../components/data/mezzeItems";
+
 
 
 function Home() {
@@ -70,9 +71,9 @@ function Home() {
                             onClick={()=>handleChange('/contact')}
                         />
                         <Button
-                            title="TRAITEUR "
+                            title="À EMPORTER"
                             className={styleButton.headerSecondButton}
-                            onClick={()=>handleChange('/traiteur')}
+                            onClick={()=>handleChange('/a-emporter')}
                         />
                     </div>
                    
@@ -150,7 +151,6 @@ function Home() {
                 </FadeInScroll>
                 <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
                  <Menu
-                    
                     title="NOS MEZZÉS"
                     imageSource="/nos-mezze.png"
                     imageAlt="Assortiment de mezzé chaud et froid"

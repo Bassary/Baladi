@@ -3,7 +3,7 @@
 
 interface cardLargProps {
     title: string;
-    subTitle1: string;
+    subTitle1?: string;
     subTitle2?: string;
     imageSource?: string;
     imageAlt?: string;

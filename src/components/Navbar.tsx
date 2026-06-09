@@ -70,6 +70,19 @@ function Navbar() {
                     </li>
                     <li>
                         <NavLink
+                            to={'/a-emporter'}
+                            end
+                           className={({isActive}) => classNames({
+                                [navbarStyle.active] : isActive,
+                                [navbarStyle.a] : true,
+                            })}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            À EMPORTER
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             to={'/traiteur'}
                             end
                             className={({isActive}) => classNames({
@@ -77,9 +90,7 @@ function Navbar() {
                                 [navbarStyle.a] : true,
                             })}
                             onClick={() => setIsMenuOpen(false)}
-                        >
-                            TRAITEUR
-                        </NavLink>
+                        >TRAITEUR</NavLink>
                     </li>
                     <li>
                         <NavLink

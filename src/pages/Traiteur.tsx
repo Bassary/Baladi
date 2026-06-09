@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import CardSmall from "../components/CardSmall";
 import { useNavigate } from "react-router-dom";
 import Animations from "../components/animation/Animations";
+import MenuPDF from '../../public/Menu-Baladi.pdf'
 
 // STYLE
 import classNames from "classnames";
@@ -211,11 +212,18 @@ function Traiteur() {
                 <h3>Pour toute question ou information contactez-nous,<br></br>
                     nous nous ferons un plaisir de vous répondre
                 </h3>
-                <Button
-                    title="CONTACTEZ-NOUS"
-                    className={classNames(styleButton.mainButton)}
-                    onClick={()=> handleChange('/contact')}
-                />
+                <div className={classNames(styleButton.flexButtonRow)}>
+                        <Button
+                            title="NOUS CONTACTER"
+                            className={styleButton.mainButton}
+                            onClick={()=> handleChange('/contact')}
+                        />
+                        <Button
+                            title="TÉLÉCHARGER LE MENU"
+                            className={styleButton.secondButton}
+                            pdfUrl={MenuPDF}
+                        />
+                    </div>
                 
             </section>
             </FadeInScroll>

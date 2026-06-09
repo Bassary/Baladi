@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import Infos from "./Info";
 import MenuBaladi from '../../public/Menu-Baladi.pdf'
 
@@ -10,6 +10,7 @@ import classNames from "classnames";
 function Footer() {
     return (
         <footer className={classNames(styleFooter.containerFooter)}>
+            <div className={classNames(styleFooter.containerFooterMainContent)}>
             <div className={classNames(styleFooter.baladiFlex)}>
                 <h1>BALADI</h1>
                 <p className={classNames(styleFooter.baladiFlexText)}>Restaurant Libanais</p>
@@ -19,6 +20,11 @@ function Footer() {
                     <NavLink
                         to={'/'}
                     >MENU</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to={'/a-emporter'}
+                    >À EMPORTER</NavLink>
                 </li>
                 <li>
                     <NavLink
@@ -84,6 +90,8 @@ function Footer() {
                         />
                     </div>
                 </div>
+                </div>
+                <div className={classNames(styleFooter.containerFooterRightAndWebMaster)}><p>©Baladi- 2026 - Tout droit réservé</p><a href='https://bassary-dev.com/' target="_blank"> • Webmaster: Bassary - wwww.bassary-dev.com</a></div>
         </footer>
     )
 }

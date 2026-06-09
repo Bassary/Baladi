@@ -8,6 +8,7 @@ import Traiteur from './pages/Traiteur';
 import Privatisation from './pages/Privatisation'
 import Contact from './pages/Contact';
 import './main.css'
+import Emporter from './pages/Emporter';
 
 // 1. Définis les routes
 const router = createBrowserRouter([
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
+      {path: 'a-emporter', element: <Emporter />},
       { path: 'notre-histoire', element: <About /> },
       { path: 'traiteur', element: <Traiteur /> },
       { path: 'privatisation', element: <Privatisation /> },

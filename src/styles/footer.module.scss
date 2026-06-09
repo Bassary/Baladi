@@ -10,6 +10,8 @@
     padding-bottom: 34px;
     padding-top: 18px;
     margin-top: 64px;
+    flex-direction: column;
+    gap: 50px;
 
     &Link {
         display: flex;
@@ -20,6 +22,18 @@
     &Contact {
         border-left: 2px solid $text-light-color;
         padding-left: 18px;
+    }
+
+    &MainContent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &RightAndWebMaster {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
     }
 }
 
@@ -46,7 +60,17 @@ li {
 
     .containerFooter {
         flex-direction: column;
-        gap: 18px;
+        gap: 32px;
+
+        &MainContent {
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &RightAndWebMaster {
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
         &Link {
             gap: 10px;
