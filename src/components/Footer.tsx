@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import Infos from "./Info";
 import MenuBaladi from '../../public/Menu-Baladi.pdf'
 
