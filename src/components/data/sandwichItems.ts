@@ -53,7 +53,7 @@ export const sanswichItems: MenuItem[] = [
     {
         id: 6,
         name: 'Brochette Agneau ou Boeuf',
-        price: '8,50€',
+        price: '8,90€',
         isVegan: false,
         isVegetarien: false,
     },
@@ -69,7 +69,7 @@ export const sanswichItems: MenuItem[] = [
         id: 8,
         name: 'Bastorma',
         subtitle: 'Viande de boeuf séché',
-        price: '7,00€',
+        price: '7,90€',
         isVegan: false,
         isVegetarien: false,
     },
@@ -80,5 +80,13 @@ export const sanswichItems: MenuItem[] = [
         price: '6,00€',
         isVegan: false,
         isVegetarien: true,
+    },
+    {
+        id: 10,
+        name: 'Lentilles végé',
+        subtitle: 'Purée de lentilles, riz et oignons caramélisés au cumin',
+        price: '6,50€',
+        isVegan: true,
+        isVegetarien: false,
     },
 ]

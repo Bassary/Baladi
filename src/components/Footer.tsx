@@ -36,17 +36,18 @@ function Footer() {
                         to={'/privatisation'}
                     >PRIVATISATION</NavLink>
                 </li>
+                
+            </ul>
+            <ul className={classNames(styleFooter.containerFooterLink)}>
+                {/* <li>
+                    <NavLink
+                        to={'/'}
+                    >NOTRE MENU MIDI</NavLink>
+                </li> */}
                 <li>
                     <NavLink
                         to={'/notre-histoire'}
                     >NOTRE HISTOIRE</NavLink>
-                </li>
-            </ul>
-            <ul className={classNames(styleFooter.containerFooterLink)}>
-                <li>
-                    <NavLink
-                        to={'/'}
-                    >NOTRE MENU MIDI</NavLink>
                 </li>
                 <li>
                     <NavLink

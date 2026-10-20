@@ -8,7 +8,7 @@ import classNames from "classnames";
 import Animations from "../components/animation/Animations";
 import MenuEmporterPDF from '../../public/Menu-Baladi-A-Emporter.pdf';
 import CardSmall from "../components/CardSmall";
-import CardFlex from "../components/CardFlex";
+
 
 // STYLE
 import style from "../styles/menu.module.scss";
@@ -18,8 +18,7 @@ import stylePage from '../styles/page.module.scss';
 import styleCardSmall from '../styles/cardSmall.module.scss';
 import styleInfo from "../styles/info.module.scss";
 import styleTitle from '../styles/title.module.scss';
-import styleCardFlex from '../styles/CardFlex.module.scss';
-import styleCardLarge from '../styles/cardLarge.module.scss';
+
 
 function Emporter() {
     const {FadeInScroll} = Animations
@@ -67,32 +66,7 @@ function Emporter() {
             >
             </Header>
         <section className={stylePage.sectionContentPage}>
-         <FadeInScroll delay={0.2} className={classNames(styleCardLarge.containerOptionTraiteur)}>
-            <CardFlex
-                        title="MENU SANDWICH À 12€"
-                        children={
-                        <>
-                            <div className={classNames(styleCardFlex.containerContentMenuEmporter)}>
-                                <span>SANDWICH</span>
-                                <p>+</p>
-                                <div className={classNames(styleCardFlex.containerContentMenuEmporterAccompagnement)}>
-                                    <span>2 ACCOMPAGNEMENT AU CHOIX</span>
-                                    <p>(falafel, fatayer, samboussek fromage)</p>
-                                </div>
-                                <p>+</p>
-                                <span>1 BOISSON</span>
-                                <p>+</p>
-                                <span>1 BAKLAWA</span>
-                            </div>
-                            {/* <Button
-                                title="VOIR LA CARTE"
-                                className={classNames(styleButton.mainButton)}
-                                onClick={()=> handleChange('/#grillades')}
-                            /> */}
-                        </>
-                        }
-                    />
-                </FadeInScroll>
+         
         
         <FadeInScroll delay={0.2} className={classNames(stylePage.containerMotionCenter)}>
         <Menu
@@ -107,21 +81,21 @@ function Emporter() {
                     <div className={classNames(styleCardSmall.flexHomeCard)}>
                     <CardSmall
                         text="ASSIETTE BALADI"
-                        price="13,90€"
+                        price="14,90€"
                         imageSource="/assiette-baladi.png"
                         imageAlt="assiette baladi"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="ASSIETTE VEGAN"
-                        price="13,90€"
+                        price="14,90€"
                         imageSource="/assiette-vegan.png"
                         imageAlt="assiette vegan"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="ASSIETTE VÉGÉTARIENNE"
-                        price="13,90€"
+                        price="14,90€"
                         imageSource="/assiette-végé.png"
                         imageAlt="assiette végétarienne"
                         classNameImage={classNames(styleCardSmall.Image)}

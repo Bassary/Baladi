@@ -89,7 +89,7 @@ function Home() {
                     <CardLarge
                         ancreId="mezze-froids"
                         title="PLATS DU JOUR"
-                        subTitle1="DU LUNDI MIDI AU VENDREDI MIDI POUR 14,90€"
+                        subTitle1="DU LUNDI MIDI AU VENDREDI MIDI POUR 15,90€"
                         subTitle2="Appellez-nous pour connaître le plat du jour !"
                         imageSource="/plat-du-jour.png"
                         imageAlt="illustration du plat du jour"
@@ -128,21 +128,21 @@ function Home() {
                     <div className={classNames(styleCardSmall.flexHomeCard)}>
                     <CardSmall
                         text="ASSIETTE BALADI"
-                        price="14,90€"
+                        price="15,90€"
                         imageSource="/assiette-baladi.png"
                         imageAlt="assiette baladi"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="ASSIETTE VEGAN"
-                        price="14,90€"
+                        price="15,90€"
                         imageSource="/assiette-vegan.png"
                         imageAlt="assiette vegan"
                         classNameImage={classNames(styleCardSmall.Image)}
                     />
                     <CardSmall
                         text="ASSIETTE VÉGÉTARIENNE"
-                        price="14,90€"
+                        price="15,90€"
                         imageSource="/assiette-végé.png"
                         imageAlt="assiette végétarienne"
                         classNameImage={classNames(styleCardSmall.Image)}
